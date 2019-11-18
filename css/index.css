@@ -95,6 +95,11 @@ header form input {
   border-radius: 0!important;
 }
 
+header form .form-control:focus{
+    outline:none;
+    box-shadow: none!important;
+}
+
 header form input::placeholder {
   color: #000000!important;
   font-family: "Acumin Pro Condensed"!important;
