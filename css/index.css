@@ -1,29 +1,59 @@
-a {
+* {
+  box-sizing: border-box;
+}
+a,
+body {
   color: black;
 }
-/* header */
 
-header {
-  background-color: #e9e9eb;
-  padding-top: 25.34vh;
-  padding-bottom: 18.04vh;
+a:hover {
+  color: black;
 }
 
-header a.position-absolute {
-  top: 35px;
-  left: 35px;
+a.position-absolute {
+  top: 1.73vh;
+  left: 2.43vw;
   width: 100px;
   height: 100px;
+  z-index: 50;
 }
 
-header a.position-absolute::after {
+a.position-absolute::after {
   content: url(../images/logo.svg);
   width: 100px;
   height: 100px;
 }
 
+/* the nav bar*/
+
+nav {
+  font-family: "acumin-pro-condensed";
+  font-size: 3.58vw;
+  font-weight: bold;
+  line-height: 4.28vw;
+}
+
+.nav-link.active::after {
+  content: "";
+  display: block;
+  margin-bottom: -0.8vw;
+  height: 0.59vw;
+  width: 92%;
+  position: absolute;
+  bottom: 50%;
+  left: 22;
+  background-color: black;
+}
+
+/* header */
+
+header {
+  background-color: #e9e9eb;
+  padding-bottom: 18.04vh;
+}
+
 header img {
-  top: 4.97vh;
+  top: 6.94vw;
   left: 12vw;
   width: 37.77vw;
   max-width: 893px;
@@ -31,25 +61,25 @@ header img {
 }
 
 header h1 {
-  font-family: "Acumin Pro Condensed";
-  font-size: 132px;
+  font-family: "acumin-pro-condensed";
+  font-size: 9.16vw;
   font-weight: 900;
-  line-height: 158px;
-  max-width: 927px;
+  line-height: 10.97vw;
+  max-width: 57.27vw;
   margin-right: 6.87vw;
 }
 
 header .content {
   margin-top: 4.32vh;
-  margin-right: 3.65vw;
-  max-width: 454px;
+  margin-right: 7.65vw;
+  max-width: 27.52vw;
 }
 
 header .content nav {
-  font-family: "Acumin Pro Condensed";
-  font-size: 66px;
+  font-family: "acumin-pro";
+  font-size: 3.58vw;
   font-weight: bold;
-  line-height: 79px;
+  line-height: 4.28vw;
 }
 
 header a:hover {
@@ -58,10 +88,12 @@ header a:hover {
 
 header .nav-link.active::after {
   content: "";
-  height: 10px;
+  display: block;
+  margin-bottom: -0.8vw;
+  height: 0.59vw;
   width: 92%;
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   left: 22;
   background-color: black;
 }
@@ -69,20 +101,20 @@ header .nav-link.active::after {
 header .contact-info {
   margin-top: 5.31vh;
   max-width: 243px;
-  font-family: "Acumin Pro Condensed";
-  font-size: 16px!important;
-  font-weight: 500!important;
-  line-height: 19px!important;
+  font-family: "acumin-pro";
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
 }
 
-header .contact-info nav{
-    font-size: 16px!important;
-    font-weight: 500!important;
-    line-height: 19px!important;   
+header .contact-info nav {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
 }
 
 header form label {
-  font-family: "Acumin Pro Condensed";
+  font-family: "acumin-pro";
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
@@ -91,19 +123,136 @@ header form label {
 header form input {
   background-color: transparent !important;
   border: none !important;
-  border-bottom: 1px solid #979797!important;
-  border-radius: 0!important;
+  border-bottom: 1px solid #979797 !important;
+  border-radius: 0 !important;
 }
 
-header form .form-control:focus{
-    outline:none;
-    box-shadow: none!important;
+header form .form-control:focus {
+  outline: none;
+  box-shadow: none !important;
 }
 
 header form input::placeholder {
-  color: #000000!important;
-  font-family: "Acumin Pro Condensed"!important;
-  font-size: 16px!important;
-  font-weight: 500!important;
-  line-height: 19px!important;
+  color: #000000 !important;
+  font-family: "acumin-pro" !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
 }
+
+/* menu */
+
+.menu {
+  background-color: #c7c7cc;
+  padding-left: 7.98vw;
+  padding-top: 272px;
+}
+
+.menu h2 {
+  font-family: "acumin-pro-condensed";
+  max-width: 357px;
+  font-size: 122px;
+  font-weight: 900;
+  line-height: 146px;
+}
+
+.menu nav {
+  font-size: 4.58vw;
+  line-height: 5.48vw;
+}
+
+.menu .nav-link {
+  max-width: 357px;
+}
+
+.menu .nav-link.active::after {
+  margin-bottom: -1vw;
+  bottom: 50%;
+  left: 4px;
+}
+
+.menu .item-title {
+  font-family: "acumin-pro-condensed";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.menu .item-price {
+  font-family: "Acumin Pro Condensed";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.menu .item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px dashed #979797;
+}
+/***********************************************************/
+
+/* @media only screen and (max-width: 1199px) {
+  header h1 {
+    font-size: 8.05rem;
+    max-width: 904px;
+    line-height: 9.6356rem;
+  }
+} */
+
+/***********************************************************/
+
+/* @media only screen and (max-width: 991px) {
+  header h1 {
+    font-size: 7.85rem;
+    max-width: 880px;
+    line-height: 9.3962rem;
+
+  }
+} */
+
+/***********************************************************/
+
+/* @media only screen and (max-width: 963px) {
+  header h1 {
+    font-size: 7.65rem;
+    max-width: 857px;
+    line-height: 9.1568rem;
+
+  }
+} */
+
+/***********************************************************/
+
+/* @media only screen and (max-width: 938px) {
+  header h1 {
+    font-size: 7.45rem;
+    max-width: 835px;
+    line-height: 8.9174rem;
+
+  }
+} */
+
+/***********************************************************/
+
+/* @media only screen and (max-width: 900px) {
+  header h1 {
+    font-size: 7.05rem;
+    max-width: 792px;
+    line-height: 8.4386rem;
+
+  }
+} */
+
+/***********************************************************/
+
+/* @media only screen and (max-width: 860px) {
+  header h1 {
+    font-size: 6.45rem;
+    max-width: 725px;
+    line-height: 7.7204rem;
+
+  }
+} */
