@@ -71,158 +71,551 @@
 
     </header>
 
-    <section class="menu">
+    <section class="menu min-vh-100">
         <h2 class="">
             what’s
             cooking
         </h2>
 
-        <div class="row justify-content-start">
-            <div class="col-5 px-0">
-                    <nav class="nav flex-column accordion" id="menu-content">
-                            <a class="nav-link active position-relative p-0 w-100"  data-toggle="collapse" 
-                            data-target="#collapseOne" 
-                            aria-expanded="true" aria-controls="collapseOne">
-                                breakfast
-                            </a>
-                                <div class=" row px-2 mt-3 pt-1  collapse mh-100" id="collapseOne" aria-labelledby="headingOne" data-parent="#menu-content">
-                                    <div class="col">
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row pt-1 mw-100 no-gutters item ">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
+        <div class="row no-gutters justify-content-start mt-5">
+            <div class="col-5 pl-0 pr-5">
+                <nav class="nav flex-column">
+                    <div class="accordion" id="menu-content">
+                        <a class="nav-link  position-relative p-0 w-100" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            breakfast
+                        </a>
+                        <div class=" row px-2 mt-3 pt-1  collapse " id="collapseOne" data-parent="#menu-content">
+                            <div class="col mb-3">
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2  mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
                                         </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div itemscope itemtype="http://schema.org/MenuItem">
-                                            <div class="row no-gutters item position-relative">
-                                                <div class="col-6 item-title">
-                                                    <span itemprop="name"> chef’s omelette </span>
-                                                </div>
-                                                <div class="col-6 text-right item-price">
-                                                    <span itemprop="priceCurrency" content="CAD">$</span>
-                                                    <span itemprop="price" content="12.75">12.75</span>
-                                                </div>
-                                            </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
                                         </div>
                                     </div>
                                 </div>
-                            <a class="nav-link position-relative p-0 w-100" href="#">lunch</a>
-                            <a class="nav-link position-relative p-0 w-100" href="#">dinner</a>
-                            <a class="nav-link position-relative p-0 w-100" href="#">drinks</a>
-                        </nav>                
-            </div>
-            <div class="col-5">
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+                        <a class="nav-link  position-relative p-0 w-100" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            lunch
+                        </a>
+                        <div class=" row px-2 mt-3 pt-1  collapse " id="collapseTwo" data-parent="#menu-content">
+                            <div class="col mb-3">
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2  mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelettennn </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a class="nav-link  position-relative p-0 w-100" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            dinner
+                        </a>
+
+                        <div class=" row px-2 mt-3 pt-1  collapse " id="collapseThree" data-parent="#menu-content">
+                            <div class="col mb-3">
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2  mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelettennn </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a class="nav-link  position-relative p-0 w-100" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            drinks
+                        </a>
+                        <div class=" row px-2 mt-3 pt-1  collapse " id="collapseFour" data-parent="#menu-content">
+                            <div class="col mb-3">
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2  mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelettennn </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div itemscope itemtype="http://schema.org/MenuItem">
+                                    <div class="row mt-2 mw-100 no-gutters item ">
+                                        <div class="col-6 item-title">
+                                            <span itemprop="name"> chef’s omelette </span>
+                                        </div>
+                                        <div class="col-6 text-right item-price">
+                                            <span itemprop="priceCurrency" content="CAD">$</span>
+                                            <span itemprop="price" content="12.75">12.75</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-5 pl-5 justify-content-start">
+                <img class="h-auto" src="images/table-with-window-view.jpg" alt="table-with-window-view">
             </div>
         </div>
 
     </section>
     <!-- jquery file-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <!-- bootstrap js file -->

@@ -33,7 +33,7 @@ nav {
   line-height: 4.28vw;
 }
 
-.nav-link.active::after {
+.nav-link.active::after, [aria-expanded="true"]::after {
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -165,10 +165,11 @@ header form input::placeholder {
   max-width: 357px;
 }
 
-.menu .nav-link.active::after {
+.menu [aria-expanded="true"]::after {
   margin-bottom: -1vw;
   bottom: 50%;
   left: 4px;
+  width: 96%;
 }
 
 .menu .item-title {
@@ -193,14 +194,8 @@ header form input::placeholder {
   border-bottom: 1px dashed #979797;
 }
 
-/* .menu nav .row{
-  flex: 0 0 41.666667%;
-    max-width: 41.666667%;
-} */
-
 .menu img{
   width: 27.98vw;
-  margin-top: calc(-5.48vw - 20px)
 }
 /***********************************************************/
 
