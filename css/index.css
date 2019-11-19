@@ -24,6 +24,45 @@ a.position-absolute::after {
   height: 100px;
 }
 
+/* close button in the article */
+
+.close{
+  opacity: 1!important;
+}
+#main article .close {
+  top: 1.73vh!important;
+  right: 2.43vw !important;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  text-indent: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#main article .close:before {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  width: 57.98px;
+  height: 57.98px;
+  border-radius: 100%;
+  background-position: center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %238E8E93%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* the nav bar*/
 
 nav {
@@ -33,7 +72,7 @@ nav {
   line-height: 4.28vw;
 }
 
-.nav-link.active::after, [aria-expanded="true"]::after {
+header .nav-link.active:hover::after, [aria-expanded="true"]::after {
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -86,7 +125,7 @@ header a:hover {
   color: black;
 }
 
-header .nav-link.active::after {
+/* header .nav-link.active::after {
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -96,7 +135,7 @@ header .nav-link.active::after {
   bottom: 50%;
   left: 22;
   background-color: black;
-}
+} */
 
 header .contact-info {
   margin-top: 5.31vh;
@@ -146,6 +185,7 @@ header form input::placeholder {
   background-color: #c7c7cc;
   padding-left: 7.98vw;
   padding-top: 272px;
+  padding-bottom: 10vh ;
 }
 
 .menu h2 {
@@ -194,9 +234,6 @@ header form input::placeholder {
   border-bottom: 1px dashed #979797;
 }
 
-.menu img{
-  width: 27.98vw;
-}
 /***********************************************************/
 
 /* @media only screen and (max-width: 1199px) {
@@ -209,14 +246,11 @@ header form input::placeholder {
 
 /***********************************************************/
 
-/* @media only screen and (max-width: 991px) {
-  header h1 {
-    font-size: 7.85rem;
-    max-width: 880px;
-    line-height: 9.3962rem;
-
+@media only screen and (max-width: 991px) {
+  .menu{
+    padding-right: 7.98vw;
   }
-} */
+}
 
 /***********************************************************/
 
