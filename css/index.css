@@ -192,6 +192,16 @@ header form input::placeholder {
   height: 10px;
   border-bottom: 1px dashed #979797;
 }
+
+/* .menu nav .row{
+  flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+} */
+
+.menu img{
+  width: 27.98vw;
+  margin-top: calc(-5.48vw - 20px)
+}
 /***********************************************************/
 
 /* @media only screen and (max-width: 1199px) {
