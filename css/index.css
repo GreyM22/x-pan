@@ -214,7 +214,22 @@ header form input::placeholder {
 
 /* contacts */
 
-#contact a.position-absolute::after{
+#contact h2::after {
+  content: "Contact X-PAN Restaurant";
+  max-width: 272px;
+  position: absolute;
+  right: -278px;
+    top: 134px;
+  transform: rotate(-90deg);
+  color: #efeff4;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+#contact a.position-absolute::after {
   content: url(../images/logo-white.svg);
   width: 100px;
   height: 100px;
@@ -285,7 +300,6 @@ h3 {
   text-transform: uppercase;
 }
 
-
 #contact form .form-control {
   border-radius: 0;
   background: transparent;
@@ -313,19 +327,19 @@ h3 {
 }
 
 #contact form input[type="submit"] {
-  color: #FFFFFF;
+  color: #ffffff;
   height: 67px;
-  font-family:"acumin-pro";
-    font-size: 11px;
+  font-family: "acumin-pro";
+  font-size: 11px;
   font-weight: bold;
   letter-spacing: 2.28px;
-  background-color: #8E8E93;
+  background-color: #8e8e93;
   border-radius: 0;
 }
 
-#contact form input[type="submit"]:hover{
+#contact form input[type="submit"]:hover {
   background-color: white;
-  color: black!important;
+  color: black !important;
 }
 
 /***********************************************************/
@@ -349,16 +363,15 @@ h3 {
   #contact {
     padding-right: 7.98vw;
   }
-  #contact .row.content > div:last-child{
+  #contact .row.content > div:last-child {
     max-width: 100%;
   }
-  #contact .end{
+  #contact .end {
     max-width: 384.996px;
   }
-  #contact .table{
+  #contact .table {
     max-width: 100%;
-  }  
-
+  }
 }
 
 /***********************************************************/
@@ -408,7 +421,7 @@ h3 {
 /***********************************************************/
 
 @media only screen and (max-width: 786px) {
-  #contact h2{
+  #contact h2 {
     font-size: 12.52vw;
     line-height: 14.98vw;
   }
