@@ -4,6 +4,7 @@
 a,
 body {
   color: black;
+  font-family: "acumin-pro-condensed";
 }
 
 a:hover {
@@ -24,13 +25,20 @@ a.position-absolute::after {
   height: 100px;
 }
 
+h2 {
+  max-width: 357px;
+  font-size: 122px;
+  font-weight: 900;
+  line-height: 146px;
+}
+
 /* close button in the article */
 
-.close{
-  opacity: 1!important;
+.close {
+  opacity: 1 !important;
 }
 #main article .close {
-  top: 1.73vh!important;
+  top: 1.73vh !important;
   right: 2.43vw !important;
   display: block;
   position: absolute;
@@ -49,7 +57,7 @@ a.position-absolute::after {
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0.75rem;
@@ -66,13 +74,13 @@ a.position-absolute::after {
 /* the nav bar*/
 
 nav {
-  font-family: "acumin-pro-condensed";
   font-size: 3.58vw;
   font-weight: bold;
   line-height: 4.28vw;
 }
 
-header .nav-link.active:hover::after, [aria-expanded="true"]::after {
+header .nav-link.active:hover::after,
+[aria-expanded="true"]::after {
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -100,7 +108,6 @@ header img {
 }
 
 header h1 {
-  font-family: "acumin-pro-condensed";
   font-size: 9.16vw;
   font-weight: 900;
   line-height: 10.97vw;
@@ -110,32 +117,13 @@ header h1 {
 
 header .content {
   margin-top: 4.32vh;
-  margin-right: 7.65vw;
+  margin-right: 3.95vw;
   max-width: 27.52vw;
-}
-
-header .content nav {
-  font-family: "acumin-pro";
-  font-size: 3.58vw;
-  font-weight: bold;
-  line-height: 4.28vw;
 }
 
 header a:hover {
   color: black;
 }
-
-/* header .nav-link.active::after {
-  content: "";
-  display: block;
-  margin-bottom: -0.8vw;
-  height: 0.59vw;
-  width: 92%;
-  position: absolute;
-  bottom: 50%;
-  left: 22;
-  background-color: black;
-} */
 
 header .contact-info {
   margin-top: 5.31vh;
@@ -185,15 +173,7 @@ header form input::placeholder {
   background-color: #c7c7cc;
   padding-left: 7.98vw;
   padding-top: 272px;
-  padding-bottom: 10vh ;
-}
-
-.menu h2 {
-  font-family: "acumin-pro-condensed";
-  max-width: 357px;
-  font-size: 122px;
-  font-weight: 900;
-  line-height: 146px;
+  padding-bottom: 10vh;
 }
 
 .menu nav {
@@ -213,14 +193,12 @@ header form input::placeholder {
 }
 
 .menu .item-title {
-  font-family: "acumin-pro-condensed";
   font-size: 24px;
   font-weight: 600;
   line-height: 26px;
 }
 
 .menu .item-price {
-  font-family: "Acumin Pro Condensed";
   font-size: 20px;
   font-weight: 300;
   line-height: 26px;
@@ -232,6 +210,122 @@ header form input::placeholder {
   width: 100%;
   height: 10px;
   border-bottom: 1px dashed #979797;
+}
+
+/* contacts */
+
+#contact a.position-absolute::after{
+  content: url(../images/logo-white.svg);
+  width: 100px;
+  height: 100px;
+  z-index: 60;
+}
+
+#contact {
+  padding-top: 13.51vh;
+  padding-left: 7.98vw;
+  background-color: black;
+  padding-bottom: 10vh;
+  color: #efeff4;
+}
+#contact h2 {
+  max-width: 668px;
+}
+
+#contact .row.content {
+  margin-top: 10.43vh;
+}
+
+#contact .row.content > div:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  max-width: 261px;
+}
+
+#contact .row.content > div:last-child {
+  font-family: "acumin-pro";
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 305px;
+}
+
+#contact a,
+#contact a:hover {
+  color: #efeff4;
+}
+
+#contact .table {
+  color: #efeff4;
+  max-width: 237px;
+}
+
+#contact .table th,
+h3 {
+  font-family: "acumin-pro-condensed";
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 31px;
+}
+
+#contact .table tbody tr {
+  border-bottom: 2px solid rgba(151, 151, 151, 0.22);
+}
+
+#contact form label {
+  font-family: "acumin-pro";
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 17px;
+  color: #8e8e93;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+#contact form .form-control {
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  color: #ffffff;
+  font-family: "acumin-pro";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2.18px;
+  line-height: 60px;
+  height: auto;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#contact form .form-control::placeholder {
+  opacity: 0.53;
+  color: #f9fbf9;
+}
+
+#contact form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgba(151, 151, 151, 0.34);
+}
+
+#contact form input[type="submit"] {
+  color: #FFFFFF;
+  height: 67px;
+  font-family:"acumin-pro";
+    font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2.28px;
+  background-color: #8E8E93;
+  border-radius: 0;
+}
+
+#contact form input[type="submit"]:hover{
+  background-color: white;
+  color: black!important;
 }
 
 /***********************************************************/
@@ -247,9 +341,24 @@ header form input::placeholder {
 /***********************************************************/
 
 @media only screen and (max-width: 991px) {
-  .menu{
+  /* menu */
+  .menu {
     padding-right: 7.98vw;
   }
+  /* contact */
+  #contact {
+    padding-right: 7.98vw;
+  }
+  #contact .row.content > div:last-child{
+    max-width: 100%;
+  }
+  #contact .end{
+    max-width: 384.996px;
+  }
+  #contact .table{
+    max-width: 100%;
+  }  
+
 }
 
 /***********************************************************/
@@ -295,3 +404,12 @@ header form input::placeholder {
 
   }
 } */
+
+/***********************************************************/
+
+@media only screen and (max-width: 786px) {
+  #contact h2{
+    font-size: 12.52vw;
+    line-height: 14.98vw;
+  }
+}
