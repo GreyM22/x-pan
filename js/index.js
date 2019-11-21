@@ -16,7 +16,7 @@
 	//rotate the logo 
 	$(window).scroll(function () {
 		var theta = $(window).scrollTop() / 100;
-		$('#stamp').css({ transform: 'rotate(' + theta + 'rad)' });
+		$('.stamp').css({ transform: 'rotate(' + theta + 'rad)' });
 	});
 
 	//navigation

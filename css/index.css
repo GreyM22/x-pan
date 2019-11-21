@@ -19,6 +19,12 @@ a.position-absolute {
   z-index: 50;
 }
 
+article a.position-absolute{
+  width: 7.94vw;
+  min-width: 39px;
+  height: 7.94vw;
+  min-height: 39px;
+}
 a.position-absolute::after {
   content: url(../images/logo.svg);
   width: 100px;
@@ -44,8 +50,8 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 6.94vw;
-  height: 6.94vw;  
+  width: 39px;
+  height: 39px;
   cursor: pointer;
   text-indent:15.94vw;
   white-space: nowrap;
@@ -59,10 +65,10 @@ h2 {
   content: "";
   display: block;
   position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  width: 6.94vw;
-  height: 6.94vw;
+  top: 0;
+  left: 0;
+  width: 39px;
+  height: 39px;
     border-radius: 100%;
   background-position: center;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %238E8E93%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
@@ -105,6 +111,10 @@ header .nav-link.active:hover::after,
 
 header {
   background-color: #e9e9eb;
+  background-image: url("../images/pattern-bg.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 18.04vh;
 }
 
@@ -119,7 +129,7 @@ header img {
 header h1 {
   font-size: 9.16vw;
   font-weight: 900;
-  line-height: 10.97vw;
+  line-height: 1;
   max-width: 57.27vw;
   margin-right: 6.87vw;
 }
@@ -174,6 +184,12 @@ header form input::placeholder {
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 19px !important;
+}
+
+header .content nav a.nav-link.active{
+  position: relative;
+  padding-top:0;
+  padding-bottom: 0;
 }
 
 /* menu */
@@ -243,14 +259,14 @@ header form input::placeholder {
 #gallery a.position-absolute::after {
   content: '';
   position: absolute;
-  top: 0.75rem;
-    left: 0.75rem;
   background-image: url("../images/logo-white.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 6.94vw;
+  min-width: 39px;
   height: 6.94vw;
+  min-height: 39px;
   z-index: 60;
 }
 
@@ -386,6 +402,7 @@ h3 {
   max-width: 29.5%;
 }
 
+
 #gallery .bg-img {
   bottom: 0;
   left: 0;
@@ -394,9 +411,18 @@ h3 {
   transform: scaleY(-1);
   background: linear-gradient(92deg, #3c3c3c 0%, #000000 100%);
   clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
-  /* background: linear-gradient( to right, #3c3c3c , #000000 ) no-repeat 0px 0px / 100% 100%;
-  background: linear-gradient(to bottom right, #3c3c3c calc(50% - 2px), #3c3c3c calc(50% - 1px), #000000 calc(50% + 1px), transparent calc(50% + 2px)) no-repeat 0px 0px / 100% 100%; */
 }
+
+/***********************************************************/
+
+@media only screen and (min-width: 1714px) {
+  /* gallery */
+  #gallery img {
+    max-width: 391px;
+  }
+  
+}
+
 /***********************************************************/
 
 /* @media only screen and (max-width: 1199px) {
