@@ -2,6 +2,24 @@
 
 (function($) {
 
+	//navigation of the menu
+	$('.accordion a.nav-link').click(function(){
+		if( $(this).attr('aria-expanded') =='true') {
+			$(this).attr('aria-expanded','false');
+		} else{
+			$('.accordion a.nav-link').attr('aria-expanded','false');
+			$('.accordion .row').removeClass('show')
+			$(this).attr('aria-expanded','true');
+		}
+		$('#'+$(this).attr('aria-controls')).toggleClass('show')
+	})
+	//rotate the logo 
+	$(window).scroll(function () {
+		var theta = $(window).scrollTop() / 100;
+		$('#stamp').css({ transform: 'rotate(' + theta + 'rad)' });
+	});
+
+	//navigation
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),

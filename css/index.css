@@ -44,11 +44,10 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 4rem;
-  height: 4rem;
+  width: 6.94vw;
+  height: 6.94vw;  
   cursor: pointer;
-  text-indent: 4rem;
-  overflow: hidden;
+  text-indent:15.94vw;
   white-space: nowrap;
 }
 
@@ -62,9 +61,9 @@ h2 {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  width: 57.98px;
-  height: 57.98px;
-  border-radius: 100%;
+  width: 6.94vw;
+  height: 6.94vw;
+    border-radius: 100%;
   background-position: center;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %238E8E93%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
   background-size: cover;
@@ -79,17 +78,27 @@ nav {
   line-height: 4.28vw;
 }
 
-header .nav-link.active:hover::after,
-[aria-expanded="true"]::after {
+header .nav-link.active::after,
+.menu [aria-expanded]::after {
   content: "";
   display: block;
   margin-bottom: -0.8vw;
   height: 0.59vw;
-  width: 92%;
+  width: 0;
   position: absolute;
   bottom: 50%;
-  left: 22;
+  left: 20;
   background-color: black;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 0.5;
+}
+
+header .nav-link.active:hover::after,
+.menu a[aria-expanded="true"]::after {
+  width: 92%;
+  opacity: 1;
 }
 
 /* header */
@@ -214,12 +223,13 @@ header form input::placeholder {
 
 /* contacts */
 
-#contact h2::after {
+#contact h2::after,
+#gallery h2::after {
   content: "Contact X-PAN Restaurant";
   max-width: 272px;
   position: absolute;
-  right: -278px;
-    top: 134px;
+  right: -290px;
+  bottom: 136px;
   transform: rotate(-90deg);
   color: #efeff4;
   font-size: 20px;
@@ -229,21 +239,31 @@ header form input::placeholder {
   text-transform: uppercase;
 }
 
-#contact a.position-absolute::after {
-  content: url(../images/logo-white.svg);
-  width: 100px;
-  height: 100px;
+#contact a.position-absolute::after,
+#gallery a.position-absolute::after {
+  content: '';
+  position: absolute;
+  top: 0.75rem;
+    left: 0.75rem;
+  background-image: url("../images/logo-white.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 6.94vw;
+  height: 6.94vw;
   z-index: 60;
 }
 
-#contact {
+#contact,
+#gallery {
   padding-top: 13.51vh;
   padding-left: 7.98vw;
   background-color: black;
   padding-bottom: 10vh;
   color: #efeff4;
 }
-#contact h2 {
+#contact h2,
+#gallery h2 {
   max-width: 668px;
 }
 
@@ -342,6 +362,41 @@ h3 {
   color: black !important;
 }
 
+/* gallery */
+
+#gallery h2{
+  z-index: 51;
+}
+#gallery h2::after {
+  content: "About X-PAN Restaurant";
+}
+
+#gallery .sub-header {
+  z-index: 1;
+  max-width: 842px;
+  color: #8e8e93;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 46px;
+}
+
+#gallery .col-3 {
+  -ms-flex: 0 0 29.5%;
+  flex: 0 0 29.5%;
+  max-width: 29.5%;
+}
+
+#gallery .bg-img {
+  bottom: 0;
+  left: 0;
+  height: 59.75%;
+  width: 100%;
+  transform: scaleY(-1);
+  background: linear-gradient(92deg, #3c3c3c 0%, #000000 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+  /* background: linear-gradient( to right, #3c3c3c , #000000 ) no-repeat 0px 0px / 100% 100%;
+  background: linear-gradient(to bottom right, #3c3c3c calc(50% - 2px), #3c3c3c calc(50% - 1px), #000000 calc(50% + 1px), transparent calc(50% + 2px)) no-repeat 0px 0px / 100% 100%; */
+}
 /***********************************************************/
 
 /* @media only screen and (max-width: 1199px) {
@@ -356,13 +411,12 @@ h3 {
 
 @media only screen and (max-width: 991px) {
   /* menu */
-  .menu {
+  .menu,
+  #contact,
+  #gallery {
     padding-right: 7.98vw;
   }
   /* contact */
-  #contact {
-    padding-right: 7.98vw;
-  }
   #contact .row.content > div:last-child {
     max-width: 100%;
   }
@@ -420,9 +474,35 @@ h3 {
 
 /***********************************************************/
 
+@media only screen and (max-width: 856px) {
+  /* header */
+  header .content {
+    max-width: 235.601px;
+  }
+}
+
+/***********************************************************/
+
 @media only screen and (max-width: 786px) {
   #contact h2 {
     font-size: 12.52vw;
     line-height: 14.98vw;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 768px) {
+  /* gallery */
+  #gallery h2 {
+    font-size: 9.16vw;
+    font-weight: 900;
+    line-height: 10.97vw;
+  }
+
+  #gallery .sub-header{
+    font-size: 7.16vw;
+    font-weight: 900;
+    line-height: 8.97vw;
   }
 }
