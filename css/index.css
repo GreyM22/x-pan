@@ -556,6 +556,11 @@ h3 {
   .menu nav{
     font-size: 10.52vw;
   }
+
+  .menu a[aria-expanded="true"]::after{
+    height: 1.1vw;
+    margin-bottom: -2vw;
+  }
   /* gallery */
   #gallery h2 {
     font-size: 9.16vw;
