@@ -7,6 +7,10 @@ body {
   font-family: "acumin-pro-condensed";
 }
 
+a {
+  cursor: pointer !important;
+}
+
 a:hover {
   color: black;
 }
@@ -38,7 +42,9 @@ h2 {
   line-height: 1.1967;
 }
 
-label.error{display:none!important;}
+label.error {
+  display: none !important;
+}
 /* close button in the article */
 
 .close {
@@ -52,9 +58,8 @@ nav {
   line-height: 1.1969;
 }
 
-
 .rectagle::after,
-[data-target='#menu'] .rectagle:after,
+[data-target="#menu"] .rectagle:after,
 .menu [aria-expanded]::after {
   content: "";
   display: block;
@@ -72,7 +77,7 @@ nav {
 }
 
 .rectagle:hover::after,
-[data-target='#menu']:hover .rectagle:after,
+[data-target="#menu"]:hover .rectagle:after,
 .menu a[aria-expanded="true"]::after {
   width: 150%;
   opacity: 1;
@@ -158,8 +163,8 @@ header .contact-info {
   line-height: 19px !important;
 }
 
-.sms-subscription{
-  font-weight: 700!important;
+.sms-subscription {
+  font-weight: 700 !important;
 }
 
 header .contact-info nav {
@@ -189,13 +194,13 @@ header form .form-control:focus {
 
 header form input::placeholder {
   color: #000000 !important;
-  font-family: "acumin-pro" !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 19px !important;
 }
 
-header .content nav a.nav-link.active, .rectagle {
+header .content nav a.nav-link.active,
+.rectagle {
   position: relative;
   padding-top: 0;
   padding-bottom: 0;
@@ -226,7 +231,7 @@ header .content nav a.nav-link.active, .rectagle {
   width: 96%;
 }
 
-.menu a[aria-expanded="true"]::after{
+.menu a[aria-expanded="true"]::after {
   width: 100%;
 }
 
@@ -404,7 +409,7 @@ h3 {
   margin-top: 5vh;
 }
 
-#about  #contact .bg-img{
+#about #contact .bg-img {
   clip-path: polygon(0 0, 0 90%, 100% 52%, 100% 0);
 }
 
@@ -433,7 +438,8 @@ h3 {
   max-width: 29.5%;
 }
 
-#gallery .bg-img, #about .bg-img {
+#gallery .bg-img,
+#about .bg-img {
   bottom: 0;
   left: 0;
   height: 59.75%;
@@ -544,20 +550,19 @@ h3 {
 /***********************************************************/
 
 @media only screen and (max-width: 768px) {
-
-  h2{
+  h2 {
     font-size: 12.52vw;
   }
-  nav{
-    font-size:  6.58vw;
+  nav {
+    font-size: 6.58vw;
   }
 
   /* menu */
-  .menu nav{
+  .menu nav {
     font-size: 10.52vw;
   }
 
-  .menu a[aria-expanded="true"]::after{
+  .menu a[aria-expanded="true"]::after {
     height: 1.1vw;
     margin-bottom: -2vw;
   }
