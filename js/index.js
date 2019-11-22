@@ -107,7 +107,7 @@ $(function () {
 
 			let  y = $('#email-form').valid();
 
-			if(!$('#email-form').validate()){
+			if(!$('#email-form').valid()){
 				$('.sms-subscription').text('Enter a valid email address');
 			 }
 			e.preventDefault();
