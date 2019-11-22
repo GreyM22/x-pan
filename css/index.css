@@ -35,7 +35,7 @@ h2 {
   max-width: 357px;
   font-size: 122px;
   font-weight: 900;
-  line-height: 146px;
+  line-height: 1.1967;
 }
 
 label.error{display:none!important;}
@@ -44,39 +44,6 @@ label.error{display:none!important;}
 .close {
   opacity: 1 !important;
 }
-#main article .close {
-  top: 1.73vh !important;
-  right: 2.43vw !important;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 39px;
-  height: 39px;
-  cursor: pointer;
-  text-indent: 15.94vw;
-  white-space: nowrap;
-}
-
-#main article .close:before {
-  -moz-transition: background-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 39px;
-  height: 39px;
-  border-radius: 100%;
-  background-position: center;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %238E8E93%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 /* the nav bar*/
 
 nav {
@@ -134,7 +101,7 @@ nav {
 .close {
   top: 1.73vh;
   right: 2.43vw;
-  font-size: 5.5vw;
+  font-size: 77px;
   font-weight: 300;
   line-height: 1;
   color: #8e8e93;
@@ -305,16 +272,16 @@ header .content nav a.nav-link.active, .rectagle {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 6.94vw;
+  /* width: 6.94vw;
   min-width: 39px;
   height: 6.94vw;
-  min-height: 39px;
+  min-height: 39px; */
   z-index: 60;
 }
 
 #contact,
 #gallery {
-  padding-top: 13.51vh;
+  padding-top: 272px;
   padding-left: 7.98vw;
   background-color: black;
   padding-bottom: 10vh;
@@ -574,6 +541,9 @@ h3 {
 
 @media only screen and (max-width: 768px) {
 
+  h2{
+    font-size: 12.52vw;
+  }
   nav{
     font-size:  6.58vw;
   }
