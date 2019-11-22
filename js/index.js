@@ -94,6 +94,7 @@ $(function () {
 		}
 
 	});
+	
 	/**********************************************************************/
 
 	var formE = document.getElementById("email-form");
