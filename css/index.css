@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+.edge-autofilled{
+  background-color: transparent!important;
+}
 a,
 body {
   color: black;
@@ -221,11 +224,23 @@ header form .form-control:focus {
   box-shadow: none !important;
 }
 
-header form input::placeholder {
+header form input::-webkit-input-placeholderr, header form input::-ms-input-placeholder {
   color: #000000 !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 19px !important;
+}
+
+
+header form input:-webkit-autofill,
+header form input:-webkit-autofill:hover, 
+header form input:-webkit-autofill:focus{
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
+  -webkit-text-fill-color: black !important;
+  caret-color: white!important;
 }
 
 header .content nav a.nav-link.active,
@@ -310,10 +325,6 @@ header .content nav a.nav-link.active,
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* width: 6.94vw;
-  min-width: 39px;
-  height: 6.94vw;
-  min-height: 39px; */
   z-index: 60;
 }
 
@@ -424,6 +435,23 @@ h3 {
   background-color: white;
   color: black !important;
 }
+
+ 
+ form#reserve-form input:-webkit-autofill,
+ form#reserve-form input:-webkit-autofill:hover, 
+ form#reserve-form input:-webkit-autofill:focus{
+  color: #000000 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 60px !important;
+  letter-spacing: 2.18px !important;
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px black inset;
+  caret-color: white!important;
+
+
+}
+
 
 /* about */
 
