@@ -38,6 +38,7 @@ h2 {
   line-height: 146px;
 }
 
+label.error{display:none}
 /* close button in the article */
 
 .close {
