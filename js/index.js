@@ -75,27 +75,23 @@ $(function () {
 			request.open(formEmail.method, formEmail.action);
 			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			request.send(getFormDataString(formEmail));
-			$('footer .sms-form').text('Reservation made successfully')
-			$(' footer form').trigger("reset");
-			$("footer").animate({ scrollTop: 0 }, "slow");
+			$('.sms-form').text('Reservation made successfully')
+			$('  form').trigger("reset");
 		}
 		else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
 			if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
 				request.open(formEmail.method, formEmail.action);
 				request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				request.send(getFormDataString(formEmail));
-				$('footer form ').trigger("reset");
-				$("footer").animate({ scrollTop: 0 }, "slow");
-				$('footer .sms-form').text('Reservation made successfully')
+				$(' form ').trigger("reset");
+				$(' .sms-form').text('Reservation made successfully')
 			}
 			else {
-				$('footer .sms-form').text('*Pleas book two hours in advance');
-				$("footer").animate({ scrollTop: 0 }, "slow");
+				$(' .sms-form').text('*Pleas book two hours in advance');
 			}
 		}
 		else {
-			$('footer .sms-form').text('*You can not reserve a table in the past. Please change your reservation date.');
-			$("footer").animate({ scrollTop: 0 }, "slow");
+			$(' .sms-form').text('*You can not reserve a table in the past. Please change your reservation date.');
 		}
 
 	});
