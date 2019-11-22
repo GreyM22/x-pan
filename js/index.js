@@ -2,12 +2,18 @@ $(function () {
 
 	//modal diaolg 
 	$('[role=dialog]')
-		.on('show.bs.modal', function (e) {
-			$(this)
-				.find('[role=document]')
-				.removeClass()
-				.addClass('modal-dialog ' + $(e.relatedTarget).data('ui-class'))
-		})
+	.on('show.bs.modal', function (e) {
+		$(this)
+			.find('[role=document]')
+			.removeClass()
+			.addClass('modal-dialog ' + $(e.relatedTarget).data('ui-class'))
+	})
+
+	$(".modal.permalink").each(function(){
+		if(window.location.href.indexOf($(this).attr("id")) != -1){
+		  $(this).modal('show');
+		}
+	  });
 
 	//rotating the logo 
 	$(window).scroll(function () {

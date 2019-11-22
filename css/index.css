@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
 a,
 body {
   color: black;
-  font-family: "acumin-pro-condensed";
+  font-family: "acumin-pro-condensed",sans-serif;
 }
 
 a {
@@ -39,7 +40,7 @@ h2 {
   max-width: 357px;
   font-size: 122px;
   font-weight: 900;
-  line-height: 1.1967;
+  line-height: 1;
 }
 
 label.error {
@@ -80,6 +81,30 @@ nav {
 [data-target="#menu"]:hover .rectagle:after,
 .menu a[aria-expanded="true"]::after {
   width: 150%;
+  opacity: 1;
+}
+
+.contact-info nav a{
+  position: relative;
+}
+.contact-info nav a::after{
+  content: "";
+  display: block;
+  margin-bottom: -0.8vw;
+  height: 0.29vw;
+  width: 0;
+  position: absolute;
+  bottom: 65%;
+  left: 0;
+  background-color: black;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 0.5;
+} 
+
+.contact-info nav a.nav-link:hover::after{
+  width: 30%;
   opacity: 1;
 }
 
@@ -157,7 +182,7 @@ header a:hover {
 
 header .contact-info {
   margin-top: 5.31vh;
-  max-width: 243px;
+  max-width: 225px;
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 19px !important;
@@ -174,7 +199,6 @@ header .contact-info nav {
 }
 
 header form label {
-  font-family: "acumin-pro";
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
@@ -217,7 +241,7 @@ header .content nav a.nav-link.active,
 
 .menu nav {
   font-size: 4.58vw;
-  line-height: 1.1969;
+  line-height: 1;
 }
 
 .menu .nav-link {
@@ -313,7 +337,7 @@ header .content nav a.nav-link.active,
 }
 
 #contact .row.content > div:last-child {
-  font-family: "acumin-pro";
+  font-family: "acumin-pro", sans-serif;
   font-size: 16px;
   line-height: 32px;
   max-width: 305px;
@@ -331,7 +355,7 @@ header .content nav a.nav-link.active,
 
 #contact .table th,
 h3 {
-  font-family: "acumin-pro-condensed";
+  font-family: "acumin-pro-condensed", sans-serif;
   font-size: 26px;
   font-weight: 500;
   line-height: 31px;
@@ -342,7 +366,7 @@ h3 {
 }
 
 #contact form label {
-  font-family: "acumin-pro";
+  font-family: "acumin-pro", sans-serif;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -359,7 +383,7 @@ h3 {
   background: transparent;
   border: 1px solid rgba(151, 151, 151, 0.34);
   color: #ffffff;
-  font-family: "acumin-pro";
+  font-family: "acumin-pro", sans-serif;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2.18px;
@@ -383,7 +407,7 @@ h3 {
 #contact form input[type="submit"] {
   color: #ffffff;
   height: 67px;
-  font-family: "acumin-pro";
+  font-family: "acumin-pro", sans-serif;
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 2.28px;
@@ -399,7 +423,7 @@ h3 {
 /* about */
 
 #about #contact .row.content > div:last-child {
-  font-family: "acumin-pro-condensed";
+  font-family: "acumin-pro-condensed", sans-serif;
   line-height: 32px;
   line-height: 26px;
   max-width: 305px;
