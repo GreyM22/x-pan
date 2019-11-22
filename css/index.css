@@ -226,6 +226,10 @@ header .content nav a.nav-link.active, .rectagle {
   width: 96%;
 }
 
+.menu a[aria-expanded="true"]::after{
+  width: 100%;
+}
+
 .menu .item-title {
   font-size: 24px;
   font-weight: 600;
