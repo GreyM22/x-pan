@@ -5,7 +5,7 @@
 a,
 body {
   color: black;
-  font-family: "acumin-pro-condensed",sans-serif;
+  font-family: "acumin-pro-condensed", sans-serif;
 }
 
 a {
@@ -81,13 +81,14 @@ nav {
 [data-target="#menu"]:hover .rectagle:after,
 .menu a[aria-expanded="true"]::after {
   width: 150%;
+  max-width: 27.52vw;
   opacity: 1;
 }
 
-.contact-info nav a{
+.contact-info nav a {
   position: relative;
 }
-.contact-info nav a::after{
+.contact-info nav a::after {
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -101,9 +102,9 @@ nav {
   -moz-transition: all 0.6s;
   transition: all 0.6s;
   opacity: 0.5;
-} 
+}
 
-.contact-info nav a.nav-link:hover::after{
+.contact-info nav a.nav-link:hover::after {
   width: 30%;
   opacity: 1;
 }
@@ -143,6 +144,10 @@ nav {
   color: white;
 }
 
+.modal-open .modal {
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+}
 /* header */
 
 header {
@@ -484,16 +489,6 @@ h3 {
 
 /***********************************************************/
 
-/* @media only screen and (max-width: 1199px) {
-  header h1 {
-    font-size: 8.05rem;
-    max-width: 904px;
-    line-height: 9.6356rem;
-  }
-} */
-
-/***********************************************************/
-
 @media only screen and (max-width: 991px) {
   .menu,
   #contact,
@@ -511,51 +506,13 @@ h3 {
 
 /***********************************************************/
 
-/* @media only screen and (max-width: 963px) {
-  header h1 {
-    font-size: 7.65rem;
-    max-width: 857px;
-    line-height: 9.1568rem;
-
-  }
-} */
-
-/***********************************************************/
-
-/* @media only screen and (max-width: 938px) {
-  header h1 {
-    font-size: 7.45rem;
-    max-width: 835px;
-    line-height: 8.9174rem;
-
-  }
-} */
-
-/***********************************************************/
-
-/* @media only screen and (max-width: 900px) {
-  header h1 {
-    font-size: 7.05rem;
-    max-width: 792px;
-    line-height: 8.4386rem;
-
-  }
-} */
-
-/***********************************************************/
-
-/* @media only screen and (max-width: 860px) {
-  header h1 {
-    font-size: 6.45rem;
-    max-width: 725px;
-    line-height: 7.7204rem;
-
-  }
-} */
-
-/***********************************************************/
-
 @media only screen and (max-width: 856px) {
+  .rectagle:hover::after,
+  [data-target="#menu"]:hover .rectagle:after,
+  .menu a[aria-expanded="true"]::after {
+    max-width: 259.601px;
+  }
+
   /* header */
   header .content {
     max-width: 259.601px;

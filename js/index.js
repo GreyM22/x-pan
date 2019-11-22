@@ -22,10 +22,9 @@ $(function () {
 
 	});
 
-	//rotating the logo inside the modal dialog 
 	$('.modal').scroll(function () {
-		var modalDialogScroll = $('.modal').scrollTop() / 100;
-		$('.modal-body .stamp').css({ transform: 'rotate(' + modalDialogScroll + 'rad)' });
+		var modalDialogScroll = $(this).scrollTop() / 100;
+		$(this).find('.stamp').css({ transform: 'rotate(' + modalDialogScroll + 'rad)' });
 	});
 
 	// Fetch the form element
