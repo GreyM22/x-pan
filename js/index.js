@@ -74,7 +74,7 @@ $(function () {
 			request.open(formEmail.method, formEmail.action);
 			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			request.send(getFormDataString(formEmail));
-			$('#reserve-form .sms-form').text('Reservation made successfully')
+			$('.sms-form').text('Reservation made successfully')
 			$('  form').trigger("reset");
 		}
 		else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
@@ -83,18 +83,18 @@ $(function () {
 				request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				request.send(getFormDataString(formEmail));
 				$(' form ').trigger("reset");
-				$(' #reserve-form .sms-form').text('Reservation made successfully')
+				$(' .sms-form').text('Reservation made successfully')
 			}
 			else {
-				$(' #reserve-form .sms-form').text('*Pleas book two hours in advance');
+				$('.sms-form').text('*Pleas book two hours in advance');
 			}
 		}
 		else {
-			$(' #reserve-form .sms-form').text('*You can not reserve a table in the past. Please change your reservation date.');
+			$('  .sms-form').text('*You can not reserve a table in the past. Please change your reservation date.');
 		}
 
 	});
-	
+
 	/**********************************************************************/
 
 	var formE = document.getElementById("email-form");
@@ -117,7 +117,7 @@ $(function () {
 			request.open(formE.method, formE.action);
 			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			request.send(getFormDataString(formE));
-			$('.sms-subscription').fadeToggle('fast');
+			$('.sms-subscription').text('Thank You!');
 			$('#email-form').trigger("reset");
 		}
 	});
