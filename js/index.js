@@ -117,7 +117,6 @@ $(function () {
 
 
 			if (!$('#email-form').valid({ errorPlacement: function(error, element) {} })) {
-				$('label.error').css('display','none');
 				$('.sms-subscription').text('Enter a valid email address');
 			} else {
 
