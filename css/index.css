@@ -557,7 +557,7 @@ h3 {
 @media only screen and (max-width: 856px) {
   /* header */
   header .content {
-    max-width: 235.601px;
+    max-width: 259.601px;
   }
 }
 
@@ -575,7 +575,7 @@ h3 {
 @media only screen and (max-width: 768px) {
 
   nav{
-    font-size: 5.58vw;
+    font-size:  6.58vw;
   }
   /* gallery */
   #gallery h2 {
