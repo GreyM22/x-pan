@@ -439,7 +439,8 @@ h3 {
 }
 
 #about #contact .bg-img {
-  clip-path: polygon(0 0, 0 90%, 100% 52%, 100% 0);
+  
+  clip-path: url(#myClipPath);
 }
 
 /* gallery */
@@ -474,8 +475,7 @@ h3 {
   height: 59.75%;
   width: 100%;
   transform: scaleY(-1);
-  background: linear-gradient(92deg, #3c3c3c 0%, #000000 100%);
-  clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+  clip-path: url(#myClipPath2);
 }
 
 /***********************************************************/
