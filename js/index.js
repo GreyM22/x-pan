@@ -105,11 +105,6 @@ $(function () {
 		var keycode = (e.keyCode ? e.keyCode : e.which);
 		if (keycode == '13') {
 
-			let  y = $('#email-form').valid();
-
-			if(!$('#email-form').valid()){
-				$('.sms-subscription').text('Enter a valid email address');
-			 }
 			e.preventDefault();
 
 			let request = new XMLHttpRequest();
@@ -120,11 +115,18 @@ $(function () {
 				}
 			});
 
-			request.open(formE.method, formE.action);
-			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			request.send(getFormDataString(formE));
-			$('.sms-subscription').text('Thank You!');
-			$('#email-form').trigger("reset");
+
+			if (!$('#email-form').valid()) {
+				$('.sms-subscription').text('Enter a valid email address');
+			} else {
+
+				request.open(formE.method, formE.action);
+				request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				request.send(getFormDataString(formE));
+				$('.sms-subscription').text('Thank You!');
+				$('#email-form').trigger("reset");
+
+			}
 		}
 	});
 
