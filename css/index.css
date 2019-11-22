@@ -212,7 +212,7 @@ header .content nav a.nav-link.active, .rectagle {
 
 .menu nav {
   font-size: 4.58vw;
-  line-height: 5.48vw;
+  line-height: 1.1969;
 }
 
 .menu .nav-link {
@@ -546,6 +546,11 @@ h3 {
   }
   nav{
     font-size:  6.58vw;
+  }
+
+  /* menu */
+  .menu nav{
+    font-size: 10.52vw;
   }
   /* gallery */
   #gallery h2 {
