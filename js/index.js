@@ -134,29 +134,6 @@ $(function () {
 			}
 		}
 	});
-
-	// formEmail.addEventListener("submit", function (e) {
-
-	// 	console.log("function called ok")
-	// 	e.preventDefault();
-
-	// 	let request = new XMLHttpRequest();
-
-	// 	request.addEventListener("load", function () {
-	// 		if (request.status === 302) { // CloudCannon redirects on success
-	// 			console.log("worked")
-	// 		}
-	// 	});
-
-	// 	request.open(formEmail.method, formEmail.action);
-	// 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	// 	request.send(getFormDataString(formEmail));
-	// 	$('.sms-subscription').fadeToggle('fast');
-	// 	$('#email-form').trigger("reset");
-	// });
-
-
-
 })
 
 /* Fromating the date in the booking form  */
