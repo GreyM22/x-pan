@@ -82,10 +82,12 @@ label.error{display:none!important;}
 nav {
   font-size: 3.58vw;
   font-weight: bold;
-  line-height: 4.28vw;
+  line-height: 1.1969;
 }
 
-header .nav-link.active::after,
+
+.rectagle::after,
+[data-target='#menu'] .rectagle:after,
 .menu [aria-expanded]::after {
   content: "";
   display: block;
@@ -94,7 +96,7 @@ header .nav-link.active::after,
   width: 0;
   position: absolute;
   bottom: 50%;
-  left: 20;
+  left: 4;
   background-color: black;
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
@@ -102,9 +104,10 @@ header .nav-link.active::after,
   opacity: 0.5;
 }
 
-header .nav-link.active:hover::after,
+.rectagle:hover::after,
+[data-target='#menu']:hover .rectagle:after,
 .menu a[aria-expanded="true"]::after {
-  width: 92%;
+  width: 150%;
   opacity: 1;
 }
 
@@ -225,7 +228,7 @@ header form input::placeholder {
   line-height: 19px !important;
 }
 
-header .content nav a.nav-link.active {
+header .content nav a.nav-link.active, .rectagle {
   position: relative;
   padding-top: 0;
   padding-bottom: 0;
@@ -570,6 +573,10 @@ h3 {
 /***********************************************************/
 
 @media only screen and (max-width: 768px) {
+
+  nav{
+    font-size: 5.58vw;
+  }
   /* gallery */
   #gallery h2 {
     font-size: 9.16vw;
