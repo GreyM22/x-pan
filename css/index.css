@@ -188,6 +188,10 @@ header .contact-info {
   line-height: 19px !important;
 }
 
+.sms-subscription{
+  font-weight: 700!important;
+}
+
 header .contact-info nav {
   font-size: 16px !important;
   font-weight: 500 !important;
