@@ -32,16 +32,6 @@ $(function () {
 		}
 
 		return data.join("&");
-
-		/**********************************************************************/
-
-		//for the email-form 
-		$('#someTextBox').keypress(function (event) {
-			var keycode = (event.keyCode ? event.keyCode : event.which);
-			if (keycode == '13') {
-				alert('You pressed a "enter" key in textbox');
-			}
-		});
 	}
 
 
@@ -106,11 +96,11 @@ $(function () {
 	});
 	/**********************************************************************/
 
-	var formEmail = document.getElementById("email-form");
+	var formE = document.getElementById("email-form");
 
 	// Override the submit event
 
-	$(formEmail).keypress(function (e) {
+	$(formE).keypress(function (e) {
 		var keycode = (e.keyCode ? e.keyCode : e.which);
 		if (keycode == '13') {
 			e.preventDefault();
@@ -123,9 +113,9 @@ $(function () {
 				}
 			});
 
-			request.open(formEmail.method, formEmail.action);
+			request.open(formE.method, formE.action);
 			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			request.send(getFormDataString(formEmail));
+			request.send(getFormDataString(formE));
 			$('.sms-subscription').fadeToggle('fast');
 			$('#email-form').trigger("reset");
 		}
