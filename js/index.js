@@ -105,9 +105,9 @@ $(function () {
 		var keycode = (e.keyCode ? e.keyCode : e.which);
 		if (keycode == '13') {
 
-			// if(!$(formE).valid()){
-			// 	$('.sms-subscription').text('Enter a valid email address');
-			//  }
+			if(!$('#email-form').validate()){
+				$('.sms-subscription').text('Enter a valid email address');
+			 }
 			e.preventDefault();
 
 			let request = new XMLHttpRequest();
