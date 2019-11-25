@@ -1,19 +1,36 @@
+
 $(function () {
+
+	var lastScrollTop = 0;
+	var num = 1;
+	$(window).scroll(function (event) {
+		var st = $(this).scrollTop();
+
+		num = $(window).scrollTop() / 2;
+		if( parseInt(num) === num){
+			if (st > lastScrollTop) {
+				$('#imgCarousel').carousel('next');
+			} else {
+				$('#imgCarousel').carousel('prev');
+			}	
+		}
+		lastScrollTop = st;
+	});
 
 	//modal diaolg 
 	$('[role=dialog]')
-	.on('show.bs.modal', function (e) {
-		$(this)
-			.find('[role=document]')
-			.removeClass()
-			.addClass('modal-dialog ' + $(e.relatedTarget).data('ui-class'))
-	})
+		.on('show.bs.modal', function (e) {
+			$(this)
+				.find('[role=document]')
+				.removeClass()
+				.addClass('modal-dialog ' + $(e.relatedTarget).data('ui-class'))
+		})
 
-	$(".modal.permalink").each(function(){
-		if(window.location.href.indexOf($(this).attr("id")) != -1){
-		  $(this).modal('show');
+	$(".modal.permalink").each(function () {
+		if (window.location.href.indexOf($(this).attr("id")) != -1) {
+			$(this).modal('show');
 		}
-	  });
+	});
 
 	//rotating the logo 
 	$(window).scroll(function () {
@@ -121,7 +138,7 @@ $(function () {
 			});
 
 
-			if (!$('#email-form').valid({ errorPlacement: function(error, element) {} })) {
+			if (!$('#email-form').valid({ errorPlacement: function (error, element) { } })) {
 				$('.sms-subscription').text('Enter a valid email address');
 			} else {
 

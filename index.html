@@ -54,7 +54,7 @@
     <!-- Header -->
     <header class=" w-100 h-auto position-relative" id="header">
 
-        <div id="carouselExampleControls " class="carousel slide" data-ride="carousel">
+        <div id="imgCarousel" class="carousel " >
             <div class="carousel-inner position-fixed">
                 <div class="carousel-item active">
                     <img class=" h-auto" src="images/shrimp-only-plate.png" alt="shrimps">
@@ -72,15 +72,23 @@
                     <img class=" h-auto" src="images/egg-potato-only-plate.png" alt="shrimps">
                 </div>
             </div>
+            <a class="carousel-control-prev " href="#imgCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next " href="#imgCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
         </div>
 
-        <ul class="position-relative  p-0 text-right ml-auto" style="list-style-type:none;">
-            <li>sofisticated</li>
+        <ul class="position-relative  p-0 text-right ml-auto mb-5" style="list-style-type:none;">
+            <li id="x">sofisticated</li>
             <li class="w-auto pr-4 pr-sm-5 mr-4">east-anatolian</li>
             <li>cuisine</li>
         </ul>
 
-        <div class="content ml-auto">
+        <div class="content ml-auto mt-5">
             <nav class="nav flex-column  ">
                 <a class="nav-link active " href="#about" data-toggle="modal" data-target="#about"
                     data-ui-class="a-zoom"> <span class="rectagle">the eatery</span></a>
