@@ -3,19 +3,27 @@ $(function () {
 
 	var lastScrollTop = 0;
 	var num = 1;
-	$(window).scroll(function (event) {
+	$(window).on('mousewheel', function (event) {
 		var st = $(this).scrollTop();
 
-		num = $(window).scrollTop() / 6;
-		console.log(num)
-		if( parseInt(num) === num){
-			if (st > lastScrollTop) {
-				$('#imgCarousel').carousel('next');
-			} else {
-				$('#imgCarousel').carousel('prev');
-			}	
+		var portion = Math.round($('header').height() / 5);
+
+		num = Math.round($(window).scrollTop());
+
+		console.log("Num: "+ num+"\n portion: "+portion);
+
+		if (num % portion == 0) {
+			$('#imgCarousel').carousel('next');
 		}
-		lastScrollTop = st;
+
+		// if( num[3] === '0'){
+		// 	if (st > lastScrollTop) {
+		// 		$('#imgCarousel').carousel('next');
+		// 	} else {
+		// 		$('#imgCarousel').carousel('prev');
+		// 	}	
+		// }
+		// lastScrollTop = st;
 	});
 
 	//modal diaolg 
@@ -147,6 +155,7 @@ $(function () {
 				request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				request.send(getFormDataString(formE));
 				$('.sms-subscription').text('Thank You!');
+				$('#email-form #email').hide();
 				$('#email-form').trigger("reset");
 
 			}
