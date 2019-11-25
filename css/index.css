@@ -127,8 +127,8 @@ nav {
 }
 
 .close {
-  top: 1.73vh;
-  right: 2.43vw;
+  top: 40px;
+  right: 40px;
   font-size: 77px;
   font-weight: 300;
   line-height: 1;
@@ -329,8 +329,9 @@ header .content nav a.nav-link.active,
   text-transform: uppercase;
 }
 
-#contact a.position-fixed::after,
-#gallery a.position-fixed::after {
+#about a.position-fixed::after,
+#gallery-modal a.position-fixed::after,
+#contacts-modal a.position-fixed::after {
   content: "";
   position: absolute;
   background-image: url("../images/logo-white.svg");
