@@ -19,21 +19,15 @@ a:hover {
   color: black;
 }
 
-a.position-absolute {
-  top: 1.73vh;
-  left: 2.43vw;
+a.position-fixed {
+  top: 40px;
+  left: 40px;
   width: 100px;
   height: 100px;
   z-index: 50;
 }
 
-article a.position-absolute {
-  width: 7.94vw;
-  min-width: 39px;
-  height: 7.94vw;
-  min-height: 39px;
-}
-a.position-absolute::after {
+a.position-fixed::after {
   content: url(../images/logo.svg);
   width: 100px;
   height: 100px;
@@ -61,6 +55,7 @@ nav {
   font-weight: bold;
   line-height: 1.1969;
 }
+
 
 .rectagle::after,
 [data-target="#menu"] .rectagle:after,
@@ -159,13 +154,29 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 18.04vh;
+  padding-top: 510px;
+}
+
+header ul{
+  font-size: 132px;
+    font-weight: 900;
+    line-height: 1;
+    max-width: 853.478;
+    margin-right: 6.87vw;
+    z-index: 20;
+}
+
+header .carousel-inner{
+  overflow: visible!important;
+  top: 6.94vw;
+    left: 12vw;
 }
 
 header img {
   top: 6.94vw;
   left: 12vw;
-  width: 37.77vw;
-  max-width: 893px;
+  width: 541px;
+  /* max-width: 893px; */
   transform: rotate(-90deg);
 }
 
@@ -175,6 +186,7 @@ header h1 {
   line-height: 1;
   max-width: 57.27vw;
   margin-right: 6.87vw;
+  z-index: 20;
 }
 
 header .content {
@@ -193,6 +205,7 @@ header .contact-info {
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 19px !important;
+  z-index:20;
 }
 
 .sms-subscription {
@@ -316,8 +329,8 @@ header .content nav a.nav-link.active,
   text-transform: uppercase;
 }
 
-#contact a.position-absolute::after,
-#gallery a.position-absolute::after {
+#contact a.position-fixed::after,
+#gallery a.position-fixed::after {
   content: "";
   position: absolute;
   background-image: url("../images/logo-white.svg");
@@ -533,6 +546,15 @@ h3 {
 
 /***********************************************************/
 
+@media only screen and (max-width: 916px) {
+  header ul{
+    font-size: 14.45vw;
+    margin-right: 4.87vw;
+  }
+}
+
+/***********************************************************/
+
 @media only screen and (max-width: 856px) {
   .rectagle:hover::after,
   [data-target="#menu"]:hover .rectagle:after,
@@ -587,4 +609,12 @@ h3 {
     font-weight: 900;
     line-height: 1.4375;
   }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 605px) {
+  header ul {
+    font-size: 12.45vw;
+}
 }
