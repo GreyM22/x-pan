@@ -6,7 +6,8 @@ $(function () {
 	$(window).scroll(function (event) {
 		var st = $(this).scrollTop();
 
-		num = $(window).scrollTop() / 2;
+		num = $(window).scrollTop() / 6;
+		console.log(num)
 		if( parseInt(num) === num){
 			if (st > lastScrollTop) {
 				$('#imgCarousel').carousel('next');
