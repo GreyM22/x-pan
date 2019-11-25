@@ -12,7 +12,7 @@ $(function () {
 
 		console.log("Num: "+ num+"\n portion: "+portion);
 
-		if (num % portion == 0) {
+		if ((num % portion == 0) && (num != 0)) {
 			$('#imgCarousel').carousel('next');
 		}
 
