@@ -230,6 +230,16 @@ header form input {
   border-radius: 0 !important;
 }
 
+header form label::after{
+  content: url(../images/email-submit.svg);
+  display: inline;
+  position: absolute;
+  bottom:7px;
+  right:3px;
+  /* margin-left: 5px; */
+}
+
+
 header form .form-control:focus {
   outline: none;
   box-shadow: none !important;
