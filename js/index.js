@@ -10,7 +10,6 @@ $(function () {
 		var portion = Math.round($('header').height() / 5);
 
 		num = Math.round($(window).scrollTop());
-		console.log("num: "+ num+"\n"+"portion"+portion+"\n equation: "+(num % portion));
 
 		if (((num % portion == 0) || (num % portion == 1)) && (num != 0)) {
 			$('#imgCarousel').carousel('next');
