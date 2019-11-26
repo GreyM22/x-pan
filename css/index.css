@@ -540,6 +540,12 @@ form#reserve-form input:-webkit-autofill:focus {
   #gallery {
     padding-right: 7.98vw;
   }
+
+  /* menu */
+  .menu .nav-link {
+    max-width: 100%;
+}
+
   /* contact */
   #contact .row.content > div:last-child {
     max-width: 384.996px;
@@ -562,8 +568,7 @@ form#reserve-form input:-webkit-autofill:focus {
 
 @media only screen and (max-width: 856px) {
   .rectagle:hover::after,
-  [data-target="#menu"]:hover .rectagle:after,
-  .menu a[aria-expanded="true"]::after {
+  [data-target="#menu"]:hover .rectagle:after {
     max-width: 259.601px;
   }
 
@@ -593,7 +598,7 @@ form#reserve-form input:-webkit-autofill:focus {
 
   /* menu */
   .menu nav {
-    font-size: 10.52vw;
+    font-size: 9.52vw;
   }
 
   .menu a[aria-expanded="true"]::after {
