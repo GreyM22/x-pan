@@ -1,6 +1,13 @@
 
 $(function () {
 
+	// for the hover effect in menu link 
+
+	$('#menu-link').mouseenter(function (){
+		$('#menu-link .rectagle').trigger('hover');
+	})
+
+	// to change the img on scroll in the header 
 	var lastScrollTop = 0;
 	var num = 1;
 	$(window).on('mousewheel', function (event) {
@@ -10,20 +17,11 @@ $(function () {
 
 		num = Math.round($(window).scrollTop());
 
-		console.log("Num: "+ num+"\n portion: "+portion);
 
 		if ((num % portion == 0) && (num != 0)) {
 			$('#imgCarousel').carousel('next');
 		}
 
-		// if( num[3] === '0'){
-		// 	if (st > lastScrollTop) {
-		// 		$('#imgCarousel').carousel('next');
-		// 	} else {
-		// 		$('#imgCarousel').carousel('prev');
-		// 	}	
-		// }
-		// lastScrollTop = st;
 	});
 
 	//modal diaolg 

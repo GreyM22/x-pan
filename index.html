@@ -37,10 +37,14 @@
     <meta name="msapplication-TileColor" content="#808080">
     <meta name="theme-color" content="#ffffff">
     <!-- face fonts -->
+    <link rel="dns-prefetch" href="https://use.typekit.net/">
+    <link rel="dns-prefetch" href="https://p.typekit.net">
     <link rel="stylesheet" href="https://use.typekit.net/hdz2inb.css">
     <!-- bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- modal show up -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="css/modal.css">
     <!-- main css-->
     <link rel="stylesheet" href="css/index.css">
@@ -88,18 +92,17 @@
             <li>cuisine</li>
         </ul>
 
-        <div class="content ml-auto mt-5">
+        <div class="content ml-sm-auto mt-5 ml-4 ">
             <nav class="nav flex-column  ">
                 <a class="nav-link active " href="#about" data-toggle="modal" data-target="#about"
                     data-ui-class="a-zoom"> <span class="rectagle">the eatery</span></a>
-                <a class="nav-link active " href="#menu" data-toggle="modal" data-target="#menu" data-ui-class="a-zoom">
-                    <span class="rectagle">
+                <a class="nav-link active " id="menu-link" href="#menu" data-toggle="modal" data-target="#menu" data-ui-class="a-zoom">
                         what’s
-
-                    </span>
-                    <span class="rectagle">
                         cooking
-                    </span>
+
+                    <!-- <span class="rectagle">
+                        cooking
+                    </span> -->
 
                 </a>
                 <a class="nav-link active " href="#gallery-modal" data-toggle="modal" data-target="#gallery-modal"
@@ -563,7 +566,7 @@
                                     </div>
                                     <a class="nav-link  position-relative p-0 w-100" data-toggle="collapse" href="#"
                                         data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Build Your Burger
+                                        build your burger
                                     </a>
                                     <div class=" row px-2 mt-3 pt-1  collapse no-gutters" id="collapseFour"
                                         data-parent="#menu-content">
@@ -808,11 +811,8 @@
     <!-- jquery file-->
     <script src="js/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
     <!-- bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
     <!-- main index file-->
     <script src="js/index.js"></script>
 </body>
