@@ -55,9 +55,13 @@ nav {
   font-weight: bold;
   line-height: 1.1969;
 }
+header .content nav a.nav-link.active{
+  padding-left:0;
+}
 
-/* header .content nav a.nav-link.active::after, */
-/* .menu [aria-expanded]::after{
+header .content nav a.nav-link.active::after
+,.menu [aria-expanded] .rectangle::after
+{
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -65,23 +69,25 @@ nav {
   width: 0;
   position: absolute;
   bottom: 50%;
-  left: 4;
+  left: 4px;
   background-color: black;
-  -webkit-transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
   opacity: 0.5;
-} */
-
-header .content nav a.nav-link.active:hover,
-.menu a[aria-expanded="true"]{
-  text-decoration: line-through;
 }
-/* header .content nav a.nav-link.active:hover::after,
-.menu a[aria-expanded="true"]::after {
+
+header .content nav a.nav-link.active:hover::after
+/* ,.menu a[aria-expanded="true"] .rectangle::after  */
+{
   width: 92%;
   opacity: 1;
-} */
+}
+
+.menu a[aria-expanded="true"] .rectangle::after {
+  width: 357px;
+  opacity: 1;
+}
 
 .contact-info nav a {
   position: relative;
@@ -331,6 +337,24 @@ header .content nav a.nav-link.active,
   height: 10px;
   border-bottom: 1px dashed #979797;
 }
+
+.menu .btn{
+  border-radius: 0;
+  border: 1px solid #000000;
+  line-height: 22px; 
+  font-weight: 500;
+  color: #000000;
+}
+
+.menu .btn:focus{
+  outline: 0;
+  box-shadow: none!important;
+}
+.menu .btn:hover{
+  color:white;
+  background-color: black;
+}
+
 
 /* contacts */
 
@@ -605,6 +629,11 @@ form#reserve-form input:-webkit-autofill:focus {
   }
 
   /* menu */
+
+  .menu [aria-expanded] .rectangle::after{
+    margin-bottom: -2vw;
+    height: 1.5vw;
+  }
   .menu nav {
     font-size: 9.52vw;
   }
