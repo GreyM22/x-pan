@@ -152,11 +152,12 @@ header {
   background-color: #e9e9eb;
   background-image: url("../images/pattern-bg.jpg");
   background-position: left top;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% 100%;
   padding-bottom: 18.04vh;
   padding-top: 310px;
+  min-height: 100vh;
 }
 
 header ul {

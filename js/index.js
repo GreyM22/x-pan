@@ -2,17 +2,48 @@
 $(function () {
 
 	// to change the img on scroll in the header 
-	var lastScrollTop = 0;
-	var num = 1;
-	$(window).on('mousewheel', function (event) {
-		var st = $(this).scrollTop();
+	$(window).on('scroll', function (event) {
+		
+		let docHeight = $('header').outerHeight(),
+        scrollTop = $(window).scrollTop(),
+		windowHeight = $(window).height();
+		
+		console.log(' eque: '+ (scrollTop + windowHeight));
 
-		var portion = Math.round($('header').height() / 5);
+		let x = scrollTop + windowHeight;
+		let y = docHeight/5*2;
+		let z = docHeight/5;
 
-		num = Math.round($(window).scrollTop());
+		// if( scrollTop + windowHeight >= docHeight-10 ){
+		// 	$('#image')[0].src= 'images/egg-potato-only-plate.png';
+		// }
+		// else if( scrollTop + windowHeight >= docHeight/5*4 ){
+		// 	$('#image')[0].src= 'images/salmon-big.png';
+		// }
+		// else if( scrollTop + windowHeight >= docHeight/5*3 ){
+		// 	$('#image')[0].src= 'images/egg-flower-bg-trasparent.png';
+		// }
+		// else if( scrollTop + windowHeight >= docHeight/5*2  ){
+		// 	$('#image')[0].src= 'images/carciofi-big.png';
+		// }
+		// else if( scrollTop <= docHeight/5  ){
+		// 	$('#image')[0].src= 'images/shrimp-only-plate.png';
+		// }
 
-		if (((num % portion == 0) || (num % portion == 1)) && (num != 0)) {
-			$('#imgCarousel').carousel('next');
+		if( scrollTop == 0 ){
+			$('#image')[0].src= 'images/shrimp-only-plate.png';
+		}
+		else if( scrollTop + windowHeight <= docHeight/5*3 ){
+			$('#image')[0].src= 'images/carciofi-big.png';
+		}
+		else if( scrollTop + windowHeight <= docHeight/5*4 ){
+			$('#image')[0].src= 'images/egg-flower-bg-trasparent.png';
+		}
+		else if( scrollTop + windowHeight <= docHeight-10 ){
+			$('#image')[0].src= 'images/salmon-big.png';
+		}
+		else{
+			$('#image')[0].src= 'images/egg-potato-only-plate.png';
 		}
 
 	});
