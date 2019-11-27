@@ -548,11 +548,15 @@ form#reserve-form input:-webkit-autofill:focus {
 }
 
   /* contact */
-  #contact .row.content > div:last-child {
+  #contact .row.content > div:last-child, #contact .row.content > div:first-child {
     max-width: 384.996px;
   }
   #contact .table {
     max-width: 100%;
+  }
+  
+  #contact .row.content{
+    margin-top: 0;
   }
 }
 
@@ -581,17 +585,9 @@ form#reserve-form input:-webkit-autofill:focus {
 
 /***********************************************************/
 
-@media only screen and (max-width: 786px) {
-  #contact h2 {
-    font-size: 12.52vw;
-  }
-}
-
-/***********************************************************/
-
 @media only screen and (max-width: 768px) {
   h2 {
-    font-size: 12.52vw;
+    font-size: 13.52vw;
   }
   nav {
     font-size: 6.58vw;
