@@ -56,8 +56,8 @@ nav {
   line-height: 1.1969;
 }
 
-header .content nav a.nav-link.active::after,
-.menu [aria-expanded]::after {
+/* header .content nav a.nav-link.active::after, */
+/* .menu [aria-expanded]::after{
   content: "";
   display: block;
   margin-bottom: -0.8vw;
@@ -71,25 +71,30 @@ header .content nav a.nav-link.active::after,
   -moz-transition: all 0.6s;
   transition: all 0.6s;
   opacity: 0.5;
-}
+} */
 
-header .content nav a.nav-link.active:hover::after,
+header .content nav a.nav-link.active:hover,
+.menu a[aria-expanded="true"]{
+  text-decoration: line-through;
+}
+/* header .content nav a.nav-link.active:hover::after,
 .menu a[aria-expanded="true"]::after {
   width: 92%;
   opacity: 1;
-}
+} */
 
 .contact-info nav a {
   position: relative;
 }
-.contact-info nav a::after {
+.contact-info nav a::after,
+.author a::after  {
   content: "";
   display: block;
   height: 2px;
   width: 0;
   position: absolute;
   bottom: 35%;
-  left: 0;
+  left: 1px;
   background-color: black;
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
@@ -97,9 +102,16 @@ header .content nav a.nav-link.active:hover::after,
   opacity: 0.5;
 }
 
-.contact-info nav a.nav-link:hover::after {
+.author a:hover{
+  text-decoration: none;
+}
+.contact-info nav a.nav-link:hover::after,
+.author a:hover::after {
   width: 30%;
   opacity: 1;
+}
+.author a:hover::after{
+  width: 120%;
 }
 
 /* modal */
@@ -179,7 +191,7 @@ header img {
   top: 6.94vw;
   left: 12vw;
   width: 541px;
-}
+  }
 
 header h1 {
   font-size: 9.16vw;
@@ -238,7 +250,6 @@ header form label::after {
   position: absolute;
   bottom: 7px;
   right: 3px;
-  /* margin-left: 5px; */
 }
 
 header form .form-control:focus {
