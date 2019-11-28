@@ -1,0 +1,689 @@
+* {
+  box-sizing: border-box;
+}
+
+.edge-autofilled {
+  background-color: transparent !important;
+}
+a,
+body {
+  color: black;
+  font-family: "acumin-pro-condensed", sans-serif;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+a:hover {
+  color: black;
+}
+
+a.position-fixed {
+  top: 40px;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  z-index: 50;
+}
+
+a.position-fixed::after {
+  content: url(../images/logo.svg);
+  width: 100px;
+  height: 100px;
+}
+
+h2 {
+  max-width: 357px;
+  font-size: 122px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+label.error {
+  display: none !important;
+}
+/* close button in the article */
+
+.close {
+  opacity: 1 !important;
+}
+/* the nav bar*/
+
+nav {
+  font-size: 3.58vw;
+  font-weight: bold;
+  line-height: 1.1969;
+}
+header .content nav a.nav-link.active{
+  padding-left:0;
+}
+
+header .content nav a.nav-link.active::after
+,.menu [aria-expanded] .rectangle::after
+{
+  content: "";
+  display: block;
+  margin-bottom: -0.8vw;
+  height: 0.59vw;
+  width: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 4px;
+  background-color: black;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0.5;
+}
+
+header .content nav a.nav-link.active:hover::after
+/* ,.menu a[aria-expanded="true"] .rectangle::after  */
+{
+  width: 92%;
+  opacity: 1;
+}
+
+.menu a[aria-expanded="true"] .rectangle::after {
+  width: 357px;
+  opacity: 1;
+}
+
+.contact-info nav a {
+  position: relative;
+}
+.contact-info nav a::after,
+.author a::after  {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 35%;
+  left: 1px;
+  background-color: black;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 0.5;
+}
+
+.author a:hover{
+  text-decoration: none;
+}
+.contact-info nav a.nav-link:hover::after,
+.author a:hover::after {
+  width: 30%;
+  opacity: 1;
+}
+.author a:hover::after{
+  width: 120%;
+}
+
+/* modal */
+
+button.close{
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.modal-fullscreen {
+  padding: 0 !important;
+}
+.modal-fullscreen .modal-dialog {
+  max-width: 100% !important;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.modal-fullscreen .modal-content {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  border: 0 none;
+  border-radius: 0;
+}
+
+.close {
+  top: 40px;
+  right: 40px;
+  font-size: 77px;
+  font-weight: 300;
+  line-height: 1;
+  color: #8e8e93;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.close:hover {
+  color: white;
+}
+
+.modal-open .modal {
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+/* header */
+
+header {
+  background-color: #e9e9eb;
+  background-image: url("../images/pattern-bg.jpg");
+  background-position: left top;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  padding-bottom: 18.04vh;
+  padding-top: 310px;
+  min-height: 100vh;
+}
+
+header ul {
+  font-size: 132px;
+  font-weight: 900;
+  line-height: 1;
+  max-width: 853.478;
+  margin-right: 6.87vw;
+  z-index: 20;
+}
+
+header .carousel-inner {
+  overflow: visible !important;
+  top: 6.94vw;
+  left: 12vw;
+}
+
+header img {
+  top: 6.94vw;
+  left: 12vw;
+  width: 541px;
+  }
+
+header h1 {
+  font-size: 9.16vw;
+  font-weight: 900;
+  line-height: 1;
+  max-width: 57.27vw;
+  margin-right: 6.87vw;
+  z-index: 20;
+}
+
+header .content {
+  margin-top: 4.32vh;
+  margin-right: 3.95vw;
+  max-width: 27.52vw;
+}
+
+header a:hover {
+  color: black;
+}
+
+header .contact-info {
+  margin-top: 5.31vh;
+  max-width: 225px;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
+  z-index: 20;
+}
+
+.sms-subscription {
+  font-weight: 700 !important;
+}
+
+header .contact-info nav {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
+}
+
+header form label {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+header form input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #979797 !important;
+  border-radius: 0 !important;
+}
+
+header form label::after {
+  content: url(../images/email-submit.svg);
+  display: inline;
+  position: absolute;
+  bottom: 7px;
+  right: 3px;
+}
+
+header form .form-control:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+header form input::-webkit-input-placeholderr,
+header form input::-ms-input-placeholder {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
+}
+
+header form input:-webkit-autofill,
+header form input:-webkit-autofill:hover,
+header form input:-webkit-autofill:focus {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 19px !important;
+  -webkit-text-fill-color: black !important;
+  caret-color: white !important;
+}
+
+header .content nav a.nav-link.active,
+.rectagle {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* menu */
+
+.menu {
+  background-color: #c7c7cc;
+  padding-left: 7.98vw;
+  padding-top: 272px;
+  padding-bottom: 10vh;
+}
+
+.menu nav {
+  font-size: 4.58vw;
+  line-height: 1;
+}
+
+.menu .nav-link {
+  max-width: 357px;
+}
+
+.menu [aria-expanded="true"]::after {
+  margin-bottom: -1vw;
+  bottom: 50%;
+  left: 4px;
+  width: 96%;
+}
+
+.menu a[aria-expanded="true"]::after {
+  width: 100%;
+}
+
+.menu .item-title {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.menu .item-price {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.menu .item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px dashed #979797;
+}
+
+.menu .btn{
+  border-radius: 0;
+  border: 1px solid #000000;
+  line-height: 22px; 
+  font-weight: 500;
+  color: #000000;
+}
+
+.menu .btn:focus{
+  outline: 0;
+  box-shadow: none!important;
+}
+.menu .btn:hover{
+  color:white;
+  background-color: black;
+}
+
+
+/* contacts */
+
+#contact h2::after,
+#gallery h2::after {
+  content: "Contact X-PAN Restaurant";
+  max-width: 272px;
+  position: absolute;
+  right: -290px;
+  bottom: 136px;
+  transform: rotate(-90deg);
+  color: #efeff4;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+#about a.position-fixed::after,
+#gallery-modal a.position-fixed::after,
+#contacts-modal a.position-fixed::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/logo-white.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 60;
+}
+
+#contact,
+#gallery {
+  padding-top: 272px;
+  padding-left: 7.98vw;
+  background-color: black;
+  padding-bottom: 10vh;
+  color: #efeff4;
+}
+#contact h2,
+#gallery h2 {
+  max-width: 678px;
+}
+
+#contact .row.content {
+  margin-top: 10.43vh;
+}
+
+#contact .row.content > div:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  max-width: 261px;
+}
+
+#contact .row.content > div:last-child {
+  font-family: "acumin-pro", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 305px;
+}
+
+#contact a,
+#contact a:hover {
+  color: #efeff4;
+}
+
+#contact .table {
+  color: #efeff4;
+  max-width: 237px;
+}
+
+#contact .table th,
+h3 {
+  font-family: "acumin-pro-condensed", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 31px;
+}
+
+#contact .table tbody tr {
+  border-bottom: 2px solid rgba(151, 151, 151, 0.22);
+}
+
+#contact form label {
+  font-family: "acumin-pro", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 17px;
+  color: #8e8e93;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#contact form .form-control {
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  color: #ffffff;
+  font-family: "acumin-pro", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2.18px;
+  line-height: 60px;
+  height: auto;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#contact form .form-control::placeholder {
+  opacity: 0.53;
+  color: #f9fbf9;
+}
+
+#contact form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgba(151, 151, 151, 0.34);
+}
+
+#contact form input[type="submit"] {
+  color: #ffffff;
+  height: 67px;
+  font-family: "acumin-pro", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2.28px;
+  background-color: #8e8e93;
+  border-radius: 0;
+}
+
+#contact form input[type="submit"]:hover {
+  background-color: white;
+  color: black !important;
+}
+
+form#reserve-form input:-webkit-autofill,
+form#reserve-form input:-webkit-autofill:hover,
+form#reserve-form input:-webkit-autofill:focus {
+  color: #000000 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 60px !important;
+  letter-spacing: 2.18px !important;
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px black inset;
+  caret-color: white !important;
+}
+
+/* about */
+
+#about #contact .row.content > div:last-child {
+  font-family: "acumin-pro-condensed", sans-serif;
+  line-height: 32px;
+  line-height: 26px;
+  max-width: 305px;
+}
+
+#about #contact .row.content {
+  margin-top: 5vh;
+}
+
+#about #contact .bg-img {
+  clip-path: polygon(0% 0%, 0% 90%, 100% 52%, 100% 0%);
+}
+
+/* gallery */
+
+#gallery h2 {
+  z-index: 51;
+}
+#gallery h2::after {
+  content: "About X-PAN Restaurant";
+}
+
+#gallery .sub-header,
+#about .sub-header {
+  z-index: 1;
+  max-width: 842px;
+  color: #8e8e93;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 46px;
+}
+
+#gallery .col-3 {
+  -ms-flex: 0 0 29.5%;
+  flex: 0 0 29.5%;
+  max-width: 29.5%;
+}
+
+#gallery .bg-img,
+#about .bg-img {
+  bottom: 0;
+  left: 0;
+  height: 59.75%;
+  width: 100%;
+  transform: scaleY(-1);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 80%, 100% 0%);
+}
+
+/***********************************************************/
+
+@media only screen and (min-width: 1714px) {
+  /* gallery */
+  #gallery img {
+    max-width: 391px;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 991px) {
+  .menu,
+  #contact,
+  #gallery {
+    padding-right: 7.98vw;
+  }
+
+  /* menu */
+  .menu .nav-link {
+    max-width: 100%;
+}
+
+  /* contact */
+  #contact .row.content > div:last-child, #contact .row.content > div:first-child {
+    max-width: 384.996px;
+  }
+  #contact .table {
+    max-width: 100%;
+  }
+  
+  #contact .row.content{
+    margin-top: 0;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 916px) {
+  header ul {
+    font-size: 14.45vw;
+    margin-right: 4.87vw;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 856px) {
+  .rectagle:hover::after,
+  [data-target="#menu"]:hover .rectagle:after {
+    max-width: 259.601px;
+  }
+
+  /* header */
+  header .content {
+    max-width: 311.601px;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 13.52vw;
+  }
+  nav {
+    font-size: 6.58vw;
+  }
+
+  /* menu */
+
+  .menu [aria-expanded] .rectangle::after{
+    margin-bottom: -2vw;
+    height: 1.5vw;
+  }
+  .menu nav {
+    font-size: 9.52vw;
+  }
+
+  .menu a[aria-expanded="true"]::after {
+    height: 1.1vw;
+    margin-bottom: -2vw;
+  }
+  /* gallery */
+
+  #gallery .sub-header,
+  #about .sub-header {
+    font-size: 7.16vw;
+    font-weight: 900;
+    line-height: 1.4375;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 576px) {
+ /* header */
+ header .content nav a.nav-link.active::after{
+   bottom: 45%;
+ }
+ header .content nav a.nav-link.active:hover::after{
+   width: 80%;
+ }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 698px) {
+  /* header */
+  header img {
+    width: 76.3vw;
+    height: 1;
+  }
+}
+
+/***********************************************************/
+
+@media only screen and (max-width: 576px) {
+  /* header */
+  header ul {
+    font-size: 12.45vw;
+  }
+  header .content {
+    margin-right: auto;
+  }
+}
+
+
