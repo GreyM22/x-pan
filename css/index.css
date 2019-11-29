@@ -260,11 +260,16 @@ header form span {
   cursor: pointer;
   z-index: 21;
 }
+
 header form span::after {
   content: url(../images/email-submit.svg);
   position: absolute;
   top:0;
   left:0;
+}
+
+header form span:hover::after{
+  content: url(../images/email-submit-black.svg);
 }
 
 header form .form-control:focus {
