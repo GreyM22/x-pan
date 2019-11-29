@@ -250,12 +250,19 @@ header form input {
   border-radius: 0 !important;
 }
 
-header form label::after {
-  content: url(../images/email-submit.svg);
-  display: inline;
+header form span {
+  display: block;
   position: absolute;
   bottom: 7px;
   right: 3px;
+  width: 14px;
+  height: 21px;
+}
+header form span::after {
+  content: url(../images/email-submit.svg);
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 header form .form-control:focus {
