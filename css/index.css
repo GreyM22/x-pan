@@ -257,6 +257,8 @@ header form span {
   right: 3px;
   width: 14px;
   height: 21px;
+  cursor: pointer;
+  z-index: 21;
 }
 header form span::after {
   content: url(../images/email-submit.svg);
