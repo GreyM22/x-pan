@@ -163,7 +163,7 @@ $(function () {
 	});
 
 	$('#submit').click(function(){
-		e.preventDefault();
+		// e.preventDefault();
 
 		let request = new XMLHttpRequest();
 
