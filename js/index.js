@@ -163,7 +163,6 @@ $(function () {
 	});
 
 	$('#submit').click(function(){
-		// e.preventDefault();
 
 		let request = new XMLHttpRequest();
 
@@ -182,7 +181,7 @@ $(function () {
 			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			request.send(getFormDataString(formE));
 			$('.sms-subscription').text('Thank You!');
-			$('#email-form #email').hide();
+			$('#email-form #email, #submit').hide();
 			$('#email-form').trigger("reset");
 
 		}
