@@ -507,6 +507,20 @@ form#reserve-form input:-webkit-autofill:focus {
   caret-color: white !important;
 }
 
+#contact table .day{
+  text-align: left!important;
+  width: 50%;
+  padding-left: 0;
+  padding-right:0;
+}
+
+#contact table .schedule{
+  text-align: right!important;
+  width: 50%;
+  padding-left: 0;
+  padding-right:0;
+}
+
 /* about */
 
 #about h2::after{
