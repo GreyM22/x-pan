@@ -390,6 +390,7 @@ header .content nav a.nav-link.active,
 
 #about a.position-fixed::after,
 #gallery-modal a.position-fixed::after,
+#term-privacy a.position-fixed::after,
 #contacts-modal a.position-fixed::after {
   content: "";
   position: absolute;
