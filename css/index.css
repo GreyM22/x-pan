@@ -566,8 +566,7 @@ form#reserve-form input:-webkit-autofill:focus {
 }
 
 #term-privacy h2::after{
-  content: "";
-
+  content: "Terms&Privacy X-PAN Restaurant";
 }
 
 #gallery .sub-header,
