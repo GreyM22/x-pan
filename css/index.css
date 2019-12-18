@@ -565,6 +565,11 @@ form#reserve-form input:-webkit-autofill:focus {
   content: "About X-PAN Restaurant";
 }
 
+#term-privacy h2::after{
+  content: "";
+
+}
+
 #gallery .sub-header,
 #about .sub-header {
   z-index: 1;
