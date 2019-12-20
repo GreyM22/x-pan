@@ -110,7 +110,7 @@ $(function () {
             $(' footer form').trigger("reset");
             $("footer").animate({ scrollTop: 0 }, "slow");
         }
-        else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) > parseInt(currentDate.getDate())) {
+        else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
             if( parseInt(day) > parseInt(currentDate.getDate()) ){
                 request.open(formEmail.method, formEmail.action);
                 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
