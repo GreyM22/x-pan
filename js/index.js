@@ -106,12 +106,12 @@ $(function () {
             request.open(formEmail.method, formEmail.action);
             request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             request.send(getFormDataString(formEmail));
-            $('footer .sms-form').text('Reservation made successfully')
+            $('footer .sms-form').text('Reservation made successfully');
             $(' footer form').trigger("reset");
             $("footer").animate({ scrollTop: 0 }, "slow");
         }
-        else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
-            if( parseInt(day) >= parseInt(currentDate.getDate()) ){
+        else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) > parseInt(currentDate.getDate())) {
+            if( parseInt(day) > parseInt(currentDate.getDate()) ){
                 request.open(formEmail.method, formEmail.action);
                 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 request.send(getFormDataString(formEmail));
@@ -119,7 +119,7 @@ $(function () {
                 $("footer").animate({ scrollTop: 0 }, "slow");
                 $('footer .sms-form').text('Reservation made successfully');
             }
-            else if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
+            else if ( parseInt(day) == parseInt(currentDate.getDate()) && parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
                 request.open(formEmail.method, formEmail.action);
                 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 request.send(getFormDataString(formEmail));
