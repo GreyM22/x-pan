@@ -536,6 +536,10 @@ form#reserve-form input:-webkit-autofill:focus {
   padding-right:0;
 }
 
+.intl-tel-input {
+  display: block !important;
+}
+
 /* about */
 
 #about h2::after{

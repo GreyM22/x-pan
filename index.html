@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>
         X-pan
@@ -41,8 +42,17 @@
     <link rel="dns-prefetch" href="https://use.typekit.net/">
     <link rel="dns-prefetch" href="https://p.typekit.net">
     <link rel="stylesheet" href="https://use.typekit.net/hdz2inb.css">
+    <!-- libraries needed to pick the time -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
+        type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- for the gallery view -->
+    <link rel="stylesheet" href="css/simplelightbox.css">
     <!-- modal show up -->
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -50,7 +60,7 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/index.css">
     <!-- google schema for the restaurant data-->
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="data">
         {
             "@context": "http://schema.org",
             "@type": "Restaurant",
@@ -77,44 +87,55 @@
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Monday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00",
+                "is_open": true
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Tuesday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00",
+                "is_open": true
+
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Wednesday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00"
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Thursday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00",
+                "is_open": true
+
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Friday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00",
+                "is_open": true
+
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Saturday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00",
+                "is_open": true
+
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "http://schema.org/Sunday",
-                "opens": "13:00:00",
-                "closes": "23:00:00"
+                "opens": "13:00",
+                "closes": "23:00",
+                "is_open": true
+
               }
             ],
             "hasOfferCatalog": {
@@ -329,6 +350,7 @@
             }
           }
     </script>
+    <script src="js/date-time-picker.js"></script>
 </head>
 
 <body>
@@ -367,7 +389,7 @@
             <div class="contact-info ml-3 position-relative">
                 12 Yonge St., Toronto ON
                 <a data-placement="top" title="Call Us" href="tel:+4169822901">
-                        416-982-2901</a>
+                    416-982-2901</a>
 
                 <a title="Email Us" href="mailto:reservations@x-panrestaurant.com">
                     reservations@x-panrestaurant.com
@@ -393,8 +415,9 @@
 
                 <div class="author mt-3 pt-3">
                     <a class="position-relative" href="#term-privacy" title="Click to open!" data-toggle="modal"
-                    data-target="#term-privacy" data-ui-class="a-zoom">
-                        Terms and Privacy </a> <br> Restaurant Website by <a class="position-relative" title="Check us out!" href="https://bonfork.com">
+                        data-target="#term-privacy" data-ui-class="a-zoom">
+                        Terms and Privacy </a> <br> Restaurant Website by <a class="position-relative"
+                        title="Check us out!" href="https://bonfork.com">
                         Bonfork </a>
                 </div>
             </div>
@@ -679,22 +702,39 @@
                         interdum sapien, eget sodales velit.
                     </div>
 
-                    <div class="row no-gutters justify-content-center justify-content-lg-start mt-5 pt-1">
+                    <div class="row no-gutters justify-content-center justify-content-lg-start mt-5 pt-1" id="gallery-container">
                         <div class="col-md-3 col-6">
-                            <img class="img-fluid" src="images/food-from-the-top.jpeg" alt="Food from the top">
-                            <img class="img-fluid" src="images/toast.jpeg" alt="Toast">
-                            <img class="d-md-none img-fluid" src="images/pasta.jpeg" alt="Pasta">
-
+                            <a href="images/food-from-the-top.jpeg" title="Food from the top">
+                                <img class="img-fluid" src="images/food-from-the-top.jpeg" alt="Food from the top">
+                            </a>
+                            <a href="images/toast.jpeg" title="Toast">
+                                <img class="img-fluid" src="images/toast.jpeg" alt="Toast">
+                            </a>
+                            <a class="d-md-none" href="images/pasta.jpeg" title="Pasta">
+                                <img class="d-md-none img-fluid" src="images/pasta.jpeg" alt="Pasta">
+                            </a>
                         </div>
                         <div class="col-md-3 col-6">
-                            <img class="img-fluid" src="images/lady.jpeg" alt="Lady with ribbon">
-                            <img class="img-fluid" src="images/cafe.jpeg" alt="Cafe">
-                            <img class="img-fluid" src="images/osters.jpg" alt="Osters">
-                            <img class=" d-md-none img-fluid" src="images/empty-cafe.jpeg" alt="Empty cafe">
+                            <a href="images/lady.jpeg" title="Lady with ribbon">
+                                <img class="img-fluid" src="images/lady.jpeg" alt="Lady with ribbon">
+                            </a>
+                            <a href="images/cafe.jpeg" title="Cafe">
+                                <img class="img-fluid" src="images/cafe.jpeg" alt="Cafe">
+                            </a>
+                            <a href="images/osters.jpg" title="Osters">
+                                <img class="img-fluid" src="images/osters.jpg" alt="Osters">
+                            </a>
+                            <a class="d-md-none" href="images/empty-cafe.jpeg" title="Empty cafe">
+                                <img class=" d-md-none img-fluid" src="images/empty-cafe.jpeg" alt="Empty cafe">
+                            </a>
                         </div>
                         <div class="col-3 d-none d-md-block">
-                            <img class="img-fluid" src="images/empty-cafe.jpeg" alt="Empty cafe">
-                            <img class="img-fluid" src="images/pasta.jpeg" alt="Pasta">
+                            <a href="images/empty-cafe.jpeg" title="Empty cafe">
+                                <img class="img-fluid" src="images/empty-cafe.jpeg" alt="Empty cafe">
+                            </a>
+                            <a href="images/pasta.jpeg" title="Pasta">
+                                <img class="img-fluid" src="images/pasta.jpeg" alt="Pasta">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -793,35 +833,7 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody class="position-relative">
-                                    <tr class="line">
-                                        <td class="day">Mon</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="day ">Tue</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="day">Wed</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="day">Thu</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="day">Fri</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class=" day">Sat</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="day">Sun</td>
-                                        <td class="schedule">11am - 10pm</td>
-                                    </tr>
+                                <tbody class="position-relative" id="opening-times">
                                 </tbody>
                             </table>
 
@@ -886,10 +898,11 @@
                                 </div>
                                 <div class="form-group mt-1 mb-0">
                                     <label for="email">phone</label>
-                                    <input type="text" name="Phone Number" class="form-control" placeholder="Phone Number" id="phone" required>                                </div>
+                                    <input type="tel" name="Phone Number" class="form-control p-0 px-3 pl-5"
+                                        placeholder="Phone Number" id="phone" required>
+                                </div>
                                 <input type="submit" class="btn text-white w-100 mt-5" value="RESERVE">
                             </form>
-
                         </div>
 
                     </div>
@@ -899,12 +912,19 @@
     </div>
 
     <!-- jquery file-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <!-- for picking the time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
     <script>
@@ -915,6 +935,67 @@
     </script>
     <!-- main index file-->
     <script src="js/index.js"></script>
+    <!-- for the gallery-->
+    <script src="js/simple-lightbox.js"></script>
+    <script>
+        $(function () {
+            var $gallery = $('#gallery-container a').simpleLightbox();
+        });
+
+        $(document).ready(function () {
+            function tConvert(time) {
+                time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+                if (time.length > 1) {
+                    time = time.slice(1);
+                    time[5] = +time[0] < 12 ? 'am' : 'pm';
+                    time[0] = +time[0] % 12 || 12;
+                }
+                return time.join('');
+            }
+
+            var data = JSON.parse($('#data').html());
+
+            var today = new Date();
+
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            data.openingHoursSpecification.map(openingsItem => {
+                var dayOfWeek = openingsItem.dayOfWeek.split('/')[3];
+
+                var item = document.createElement('tr');
+
+                var dayHeading = document.createElement('td');
+                dayHeading.setAttribute('class', 'day');
+                var day = document.createTextNode(dayOfWeek);
+                dayHeading.appendChild(day);
+
+                var hourHeading = document.createElement('td');
+                hourHeading.setAttribute('class', 'schedule');
+
+                if (openingsItem.is_open) {
+                    var openHours = document.createTextNode(tConvert(openingsItem.opens) + ' - ');
+                    var closeHours = document.createTextNode(tConvert(openingsItem.closes));
+                    hourHeading.appendChild(openHours);
+                    hourHeading.appendChild(closeHours);
+                } else {
+                    var closed = document.createTextNode('Closed');
+                    hourHeading.appendChild(closed);
+                }
+
+                item.appendChild(dayHeading);
+                item.appendChild(hourHeading);
+
+                document.getElementById('opening-times').appendChild(item);
+            });
+        });
+    </script>
 </body>
 
 </html>
