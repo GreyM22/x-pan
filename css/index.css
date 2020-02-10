@@ -540,6 +540,8 @@ form#reserve-form input:-webkit-autofill:focus {
   display: block !important;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button,
 input[type=time]::-webkit-inner-spin-button, 
 input[type=time]::-webkit-outer-spin-button,
 input[type="date"]::-webkit-inner-spin-button { 
