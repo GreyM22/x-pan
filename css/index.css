@@ -552,6 +552,10 @@ input[type="date"]::-webkit-inner-spin-button {
     margin: 0; 
 }
 
+#phone{
+  padding-left: 90px!important;
+}
+
 /* about */
 
 #about h2::after{
