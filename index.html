@@ -370,21 +370,30 @@
 
         <div class="content ml-sm-auto mt-5 ml-4 ">
             <nav class="nav flex-column ml-3 ">
-                <a class="nav-link active " title="What about us!" href="#about" data-toggle="modal"
-                    data-target="#about" data-ui-class="a-zoom"> <span class="rectagle">the eatery</span></a>
-                <a class="nav-link active" title="Check our menu!" id="menu-link" href="#menu" data-toggle="modal"
-                    data-target="#menu" data-ui-class="a-zoom">
-                    what’s
-                    cooking
-                </a>
-                <a class="nav-link active" href="#gallery-modal" title="Take a look!" data-toggle="modal"
-                    data-target="#gallery-modal" data-ui-class="a-zoom"> <span class="rectagle">gallery</span> </a>
-                <a class="nav-link active " title="Contact us!" href="#contacts-modal" data-toggle="modal"
-                    data-target="#contacts-modal" data-ui-class="a-zoom">
-                    <span class="rectagle">
-                        contact
-                    </span>
-                </a>
+                <span data-toggle="modal" data-target="#about" data-ui-class="a-zoom">
+                    <a class="nav-link active " title="What about us!" href="#about">
+                        <span class="rectagle">the eatery</span>
+                    </a>
+                </span>
+
+                <span data-toggle="modal" data-target="#menu" data-ui-class="a-zoom">
+                    <a class="nav-link active" title="Check our menu!" id="menu-link" href="#menu">
+                        what’s
+                        cooking
+                    </a>
+                </span>
+                <span data-toggle="modal" data-target="#gallery-modal" data-ui-class="a-zoom">
+                    <a class="nav-link active" href="#gallery-modal" title="Take a look!">
+                        <span class="rectagle">gallery</span>
+                    </a>
+                </span>
+                <span data-toggle="modal" data-target="#contacts-modal" data-ui-class="a-zoom">
+                    <a class="nav-link active " title="Contact us!" href="#contacts-modal">
+                        <span class="rectagle">
+                            contact
+                        </span>
+                    </a>
+                </span>
             </nav>
             <div class="contact-info ml-3 position-relative">
                 12 Yonge St., Toronto ON
@@ -702,7 +711,8 @@
                         interdum sapien, eget sodales velit.
                     </div>
 
-                    <div class="row no-gutters justify-content-center justify-content-lg-start mt-5 pt-1" id="gallery-container">
+                    <div class="row no-gutters justify-content-center justify-content-lg-start mt-5 pt-1"
+                        id="gallery-container">
                         <div class="col-md-3 col-6">
                             <a href="images/food-from-the-top.jpeg" title="Food from the top">
                                 <img class="img-fluid" src="images/food-from-the-top.jpeg" alt="Food from the top">
@@ -912,15 +922,11 @@
     </div>
 
     <!-- jquery file-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- for picking the time -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>

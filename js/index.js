@@ -1,4 +1,12 @@
 
+$(document).ready(function () {
+    $(".modal.permalink").each(function () {
+        if (window.location.href.indexOf($(this).attr("id")) != -1) {
+            $(this).modal('show');
+        }
+    });
+});
+
 $(function () {
 
 	// to change the img on scroll in the header 
@@ -26,20 +34,6 @@ $(function () {
 
 	});
 
-	//modal diaolg 
-	$('[role=dialog]')
-		.on('show.bs.modal', function (e) {
-			$(this)
-				.find('[role=document]')
-				.removeClass()
-				.addClass('modal-dialog ' + $(e.relatedTarget).data('ui-class'))
-		})
-
-	$(".modal.permalink").each(function () {
-		if (window.location.href.indexOf($(this).attr("id")) != -1) {
-			$(this).modal('show');
-		}
-	});
 
 	//rotating the logo 
 	$(window).scroll(function () {
@@ -48,6 +42,7 @@ $(function () {
 
 	});
 
+	// for the modal dialog 
 	$('.modal').scroll(function () {
 		var modalDialogScroll = $(this).scrollTop() / 100;
 		$(this).find('.stamp').css({ transform: 'rotate(' + modalDialogScroll + 'rad)' });
